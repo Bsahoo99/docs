@@ -1,0 +1,24 @@
+---
+title: "Use grid view"
+description: "Grid View shows all features at once in a flat table — good for scanning through everything quickly."
+---
+Grid View shows every feature in a flat table (grid), regardless of which direction it is assigned to. This is useful when you have a part with many features and want to scan through everything at once.
+
+![Grid view table listing features and setup columns](/images/onboarding/screenshots/s24-direction-grid-view-table.webp)
+
+## Row details
+
+| Column | What It Shows |
+|--------|---------------|
+| Feature name / type | The classification (e.g., Independent Plane, Through Hole, Slot) |
+| Dimensions | Area, radius, depth — depends on feature type |
+| Setup direction | Which face direction is currently assigned (Top, Bottom, Front, etc.) |
+| Operations | How many machining operations are assigned to this feature |
+| Flag status | Whether this feature has been flagged as incorrect |
+
+## Use Grid View
+
+- **Click any row** to select that feature — it highlights on the 3D model and a feature card appears
+- **Scan the direction column** — if a feature is in the wrong direction, click it and reassign it
+- **Use it as a checklist** — go down the list row by row to make sure you have reviewed every feature
+- **Look for unusual dimensions** — a radius of 10,000 mm or a depth of 0 mm might mean the AI misread the geometry. Flag those.

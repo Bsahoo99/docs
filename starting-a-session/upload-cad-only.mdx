@@ -1,0 +1,58 @@
+---
+title: "Upload a CAD file"
+description: "How to start a session with just a STEP file and no GD&T drawing."
+---
+Choose this option if you have a STEP file but do not have an engineering drawing — or if you want to proceed without one.
+
+<Warning>
+**This is a one-way decision.** Once you click **Upload CAD Only**, you **cannot** add a GD&T drawing to this session later. If you later find your drawing and want to link tolerances, you will need to start a brand new session. Take a few extra minutes now to locate your drawing before uploading — it can save you from starting over.
+</Warning>
+
+## Step-by-Step Instructions
+
+<Steps>
+  <Step title="Click + New Session on the Dashboard">
+    From the Dashboard, click the **+ New Session** button in the top-right corner. The upload page opens.
+    
+    ![Upload page with two upload zones for CAD and GD&T](/images/onboarding/screenshots/s01-what-is-neuramill-upload-overview.webp)
+  </Step>
+  <Step title="Find your STEP file on your computer">
+    Your STEP file has the extension `.step` or `.stp` at the end of its name. It is usually in a folder called something like "Parts," "Exports," or "CAD files."
+    
+    If you are not sure where it is, ask the person who made the part drawing.
+  </Step>
+  <Step title="Upload your STEP file to the left zone">
+    The **left upload zone** on the upload page is for your CAD file.
+    
+    **Option A — Drag and drop:**
+    - Open the folder where your STEP file is saved.
+    - Click and hold on the file.
+    - Drag it onto the left upload zone in your browser.
+    - Release your mouse button.
+    
+    **Option B — Click to browse:**
+    - Click anywhere inside the left upload zone.
+    - A file browser window opens.
+    - Navigate to your STEP file and double-click it.
+    
+    ![Upload page with CAD file attached and green checkmark](/images/onboarding/screenshots/s18-upload-cad-only-step-attached.webp)
+  </Step>
+  <Step title="Confirm the file was accepted">
+    When the file is accepted, you will see the **filename** and a **green checkmark** inside the upload zone. This means it worked.
+    
+    If you see a red error instead, the file may be the wrong format. Only `.step` and `.stp` files are accepted.
+  </Step>
+  <Step title="Click Go to Tool Recommender">
+    A blue button appears below the upload zone. It says **Upload CAD Only**. Click it.
+    
+    Neuramill now reads your file and finds every machinable feature. This usually takes **10 to 30 seconds**. A spinning indicator appears — do not close the browser tab while this is running.
+  </Step>
+</Steps>
+
+## Next steps
+
+After processing, you are taken to **Step 1 — Direction of Cut**. This is where you review every feature the AI found in your part.
+
+<Card title="Step 1: Direction of Cut" icon="arrow-right" href="/direction-of-cut/overview">
+  How to review and approve the features detected in your part.
+</Card>

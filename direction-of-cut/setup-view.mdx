@@ -1,0 +1,30 @@
+---
+title: "Use setup view"
+description: "Setup View groups all features by their assigned machining direction — useful for checking that everything is in the right group."
+---
+Setup View shows the same features as CAD View, but organized differently — as **collapsible groups**, one per machining direction.
+
+![Setup view with Top expanded and other groups collapsed](/images/onboarding/screenshots/s23-direction-setup-view-groups.webp)
+
+## View layout
+
+Six groups are shown: **Top, Bottom, Front, Back, Left, Right**
+
+Each group header shows:
+- The direction name
+- A count of how many features are in it (e.g., "Top — 3 features")
+
+Click a group header to **expand** it and see the individual feature cards inside. Click it again to collapse.
+
+## Why Use Setup View?
+
+Setup View is best for answering the question: *"Are all my features in the right groups?"*
+
+For example:
+- All the holes on the top face of the part should be under **Top**
+- All the holes on the bottom face should be under **Bottom**
+- If a hole on the top face is sitting under **Front**, that is a mistake — you would move it
+
+<Tip>
+If only two groups have features (e.g., only Top and Bottom have any features), it likely means your part only needs **two setups** — one clamping for the top face, one flip for the bottom. That is useful to know before you reach the Clamping Strategy step.
+</Tip>

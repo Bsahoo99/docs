@@ -1,0 +1,38 @@
+---
+title: "Read tool recommendation cards"
+description: "Every field on a tool card explained — so you know exactly what you are looking at."
+---
+Each operation has one or more recommended tool cards. The first card (#1) is the best match. Cards #2, #3, and below are ranked alternatives.
+
+{/* TODO: Add screenshot — Full recommended tool card with all fields labeled: ranking #1, tool name, green Owned badge, tool type, diameter, flutes, cutting length, overall length, vendor, View Product link, and Machining Parameters section showing RPM, Feedrate, Plunge rate */}
+
+## Tool Identity Fields
+
+| Field | What It Means |
+|-------|---------------|
+| **#1, #2, #3...** | Ranking. Tool #1 is the best match for this operation given your material, machine, and rigidity setting. |
+| **Tool name** | The product name and catalog number (e.g., *"E12B 3/32 2F RR M/G End Mill"*) |
+| **Owned badge** (green) | This tool is in your company's current physical inventory. If there is no green badge, the tool is from the catalog — you would need to order it. |
+| **Tool Type** | The category: Ball End Mill, Flat End Mill, Chamfer End Mill, Drill, Spot Drill, Reamer, etc. |
+
+## Tool Geometry Fields
+
+| Field | What It Means |
+|-------|---------------|
+| **Diameter** | The cutting diameter in mm (or inches) |
+| **Flute Count** | The number of cutting edges. More flutes = finer surface finish, but chips are harder to clear. Fewer flutes = better chip evacuation, good for soft materials and deep pockets. |
+| **Cutting Length** | How deep the tool can cut — its usable cutting zone length |
+| **Overall Length** | Total length including the shank. Important for setting your Tool Length Offset (TLO) in the CNC program. |
+
+## Vendor and Ordering
+
+| Field | What It Means |
+|-------|---------------|
+| **Vendor** | Who makes or supplies this tool |
+| **View Product** link | Click to open the vendor's product page in a new browser tab — useful for confirming specs or placing an order |
+
+## Machining Parameters
+
+Below the tool details, each card shows the calculated cutting parameters. These are the numbers you enter into your CNC machine.
+
+See [Speeds and Feeds Explained](/tool-recommender/speeds-and-feeds) for a full breakdown.

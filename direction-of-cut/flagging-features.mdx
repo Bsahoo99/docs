@@ -1,0 +1,57 @@
+---
+title: "Flag feature issues"
+description: "How to flag features the AI got wrong — either features that should not be machined, or features with incorrect dimensions."
+---
+If the AI detected something that is wrong, you **flag** it. For most flags, Neuramill excludes that feature from all downstream steps — it will not appear in clamping, policy, or tool recommendations. **The "Wrong Dimensions" flag is an exception:** the feature stays in the plan so you can correct its dimensions directly on the card before the plan continues.
+
+<Warning>
+**Only flag features you are certain are wrong.** Flagged features are completely excluded from the rest of the plan. If you flag a real feature by mistake, it will not get a tool assigned and will not appear in your machining plan.
+</Warning>
+
+## Two Reasons to Flag
+
+| Flag Reason | When to Use |
+|-------------|-------------|
+| **Extra Feature** | The AI found something that should NOT be machined — a decorative radius, a reference hole, a design detail that the tool should never touch. |
+| **Wrong Dimensions** | The feature is real and needs to be machined, BUT the dimensions shown (radius, depth, area) are incorrect. |
+
+## Flag a Feature
+
+<Steps>
+  <Step title="Find the feature card">
+    Locate the feature card in CAD View, Setup View, or Grid View.
+  </Step>
+  <Step title="Click the flag icon">
+    Click the small **flag icon** in the top-right corner of the feature card.
+    
+    ![Annotated feature card showing flag icon location](/images/onboarding/screenshots/s25-direction-feature-card-annotated.webp)
+  </Step>
+  <Step title="Choose the reason">
+    A dialog box appears: **Flag Feature**.
+    It has two checkboxes: **Extra Feature** and **Wrong Dimensions**.
+    Select the single reason that applies — **Extra Feature** or **Wrong Dimensions**.
+    
+    ![Flag Feature dialog with Wrong Dimensions selected](/images/onboarding/screenshots/s27-direction-flag-feature-dialog.webp)
+  </Step>
+  <Step title="Click the red Flag Feature button">
+    Click the red **Flag Feature** button at the bottom of the dialog.
+    The feature card turns red with a red border. The flag icon fills in red. The flag reason appears on the card.
+  </Step>
+</Steps>
+
+## If You Flagged "Wrong Dimensions"
+
+After flagging a feature as Wrong Dimensions, the dimension field on the card becomes **editable** (it looks like a text input box instead of just a number).
+
+1. Click inside the dimension field.
+2. Delete the wrong value and type the correct one.
+3. Press **Enter** on your keyboard or click away from the field to save.
+
+![Feature card after flagging with red state indicators](/images/onboarding/screenshots/s28-direction-feature-flagged-state.webp)
+
+## Remove a Flag (If You Flagged by Mistake)
+
+1. Click the red flag icon on the flagged card.
+2. Uncheck all reasons in the dialog.
+3. Click the button to confirm.
+4. The flag is removed and the card returns to normal.

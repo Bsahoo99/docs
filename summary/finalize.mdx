@@ -1,0 +1,52 @@
+---
+title: "Finalize a session"
+description: "What 'All Steps Complete' means, and what to do with your finished plan."
+---
+When all five steps are complete, the bottom of the session sidebar shows **"All Steps Complete"** with a checkmark icon.
+
+## Finalized status
+
+| What It Is | What It Is Not |
+|-----------|----------------|
+| Your session data is saved to the Neuramill server | It does NOT send anything to your CNC machine |
+| You can reopen it any time from the Jobs tab | It does NOT export a G-code file |
+| You can still go back and make changes | It does NOT lock the plan permanently |
+
+**In plain terms:** Finalized means your machining plan is saved and complete inside Neuramill. You use the speeds, feeds, and tool information from the Summary as your reference when you set up the machine and write your program.
+
+## Use your plan at the machine
+
+At this point, your plan is done. Here is how to put it to use:
+
+1. Go to the **Summary** tab
+2. Look at each strategy card in order
+3. For each operation pass, note:
+   - Which tool to load
+   - The **RPM** (S word) to program
+   - The **Cutting Feedrate** (F word) to use on cutting moves
+   - The **Plunge Feedrate** (F word) to use on Z-down moves
+4. Screenshot the Summary or write the values down as your reference sheet
+5. **On your first run: start at 50% feedrate override on the machine.** Ramp up once the cut is confirmed stable.
+
+## Go back to make changes
+
+Your plan is never permanently locked. You can go back to any step at any time:
+
+1. Click the step name in the navigation bar at the top
+2. Make your changes
+3. Re-approve that step (and any steps after it that need updating)
+
+## Find your session later
+
+Your completed session is saved in the **Jobs tab** on the Dashboard. Click it to reopen at any time. The Job ID number in the table identifies your session — write it down if you need to reference it with the Neuramill support team.
+
+<Check>You have completed your first Neuramill session. Your machining plan is ready.</Check>
+
+<CardGroup cols={2}>
+  <Card title="Session Completion Checklist" icon="list-check" href="/reference/checklist">
+    A printable checklist to review before calling every session done.
+  </Card>
+  <Card title="Common Mistakes" icon="triangle-exclamation" href="/reference/common-mistakes">
+    The most frequent errors and how to avoid them.
+  </Card>
+</CardGroup>

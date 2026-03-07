@@ -1,0 +1,52 @@
+---
+title: "Override tool recommendations"
+description: "How to override a recommended tool or change its cutting parameters if the recommendation does not suit your shop."
+---
+If the #1 recommended tool is not the right choice — or if you want to adjust the speeds and feeds — you can override the recommendation manually.
+
+## Override Cutting Parameters
+
+<Steps>
+  <Step title="Find the tool card you want to change">
+    Locate the operation pass and tool card you want to modify.
+  </Step>
+  <Step title="Click the Edit button">
+    On the tool card, look for an **Edit button** or a small pencil icon. Click it.
+    The parameter fields change from plain text to **editable input boxes**.
+    
+    {/* TODO: Add screenshot — Tool card in edit mode — RPM field and Feedrate field shown as editable inputs. Undo button (amber arrow) visible in the card header. */}
+  </Step>
+  <Step title="Change the values">
+    Click inside the field you want to change (RPM, cutting feedrate, or plunge feedrate).
+    Delete the existing value and type your new value.
+  </Step>
+  <Step title="Confirm">
+    Click away from the field or press Enter. The new value is saved.
+    An **Undo button** (amber arrow icon) appears in the card header to remind you that this card has been manually changed.
+  </Step>
+</Steps>
+
+## Undo an Override
+
+If you want to go back to the original recommended values:
+
+1. Click the **Undo button** (the amber arrow icon in the card header).
+2. All values revert to the original recommendations.
+
+## Choosing an Alternative Tool
+
+If you want to use a different tool entirely — not just change the parameters on the #1 pick:
+
+The tool card section shows **Recommended Tools (X)** where X is the number of available candidates. Candidates are ranked #1, #2, #3, etc.
+
+Review the alternatives listed. Each shows the same tool details as the #1 pick. If #2 or #3 is a better fit for your shop, click or tap that tool card to make it the active selection (or focus the card and press **Enter** if you are using a keyboard). The card highlights to confirm it is now selected.
+
+<Note>
+**Overriding one parameter does not automatically recalculate the others.**
+
+If you change the RPM, the feedrate does not update automatically. You need to check and adjust the feedrate as well. The formula is:
+
+> **Feedrate = RPM × Flute Count × Chip Load**
+
+If you are not sure what chip load to use for that tool and material, consult your tooling vendor's catalog or ask the Neuramill support team.
+</Note>

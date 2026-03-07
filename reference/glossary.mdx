@@ -1,0 +1,122 @@
+---
+title: "Glossary"
+description: "Plain-language definitions for every technical term used in Neuramill."
+---
+Every term used in Neuramill, explained in plain language.
+
+<AccordionGroup>
+  <Accordion title="CAD">
+    Computer-Aided Design. In Neuramill, this specifically means a STEP (.step / .stp) file representing a solid 3D part. This is the file you upload to start a session.
+  </Accordion>
+  <Accordion title="GD&T (Geometric Dimensioning and Tolerancing)">
+    A system of symbols on an engineering drawing that specifies how precise a dimension needs to be. For example, a hole diameter callout like ⌀12.00 ±0.01mm. When you upload a GD&T drawing, Neuramill reads these tolerances and uses them to tighten the tool recommendations for critical features.
+  </Accordion>
+  <Accordion title="STEP / STP">
+    The 3D file format Neuramill accepts. STEP (also written .stp) is a universal format that every major CAD software can export — SolidWorks, Fusion 360, CATIA, Siemens NX, and others all support it.
+  </Accordion>
+  <Accordion title="Session">
+    One complete Neuramill workflow for one part. Tied to one STEP file. A session contains all features, machining context, clamping strategies, tool selections, and speeds/feeds for that part.
+  </Accordion>
+  <Accordion title="Feature">
+    A discrete manufacturing element detected in the 3D geometry: a hole, pocket, slot, flat face, chamfer, fillet, or contour. Each feature gets one or more machining operations assigned to it.
+  </Accordion>
+  <Accordion title="Operation">
+    The machining process applied to a feature: Facing, Roughing, Finishing, Drilling, Spot Drilling, Reaming, and so on.
+  </Accordion>
+  <Accordion title="Setup / Direction of Cut">
+    One clamping position. The direction the tool approaches the part from: Top, Bottom, Front, Back, Left, or Right.
+  </Accordion>
+  <Accordion title="Datum Face">
+    The face of the part that sits against the fixture in a given setup. The reference face. Usually the flattest, most stable surface for that clamping orientation.
+  </Accordion>
+  <Accordion title="Blocked Face">
+    A face covered by the fixture (vise jaw, clamp, chuck) that the cutting tool cannot reach in that setup.
+  </Accordion>
+  <Accordion title="Accessible Face">
+    A face the cutting tool can reach in the current setup — not covered by the fixture.
+  </Accordion>
+  <Accordion title="Rigidity">
+    A qualitative setting (Low / Medium / High / Very High) that describes how stiff the combination of part, fixture, and machine is. Controls how aggressive the calculated cutting parameters will be.
+  </Accordion>
+  <Accordion title="Stock">
+    The raw block of material before machining begins. The rectangular billet or casting you start from.
+  </Accordion>
+  <Accordion title="Bounding Box">
+    The minimum rectangular block that exactly fits around the 3D part geometry. Click the Bounding Box button in Machining Setup to auto-fill the smallest possible stock dimensions.
+  </Accordion>
+  <Accordion title="Policy / Machining Policy">
+    A set of cutting rules stored in your Profile that Neuramill applies to new sessions. Controls speeds, feeds, depths, and step-over based on material, operation, and tier.
+  </Accordion>
+  <Accordion title="Policy Tier (Ideal / Moderate / Worst)">
+    The three levels of the policy system. Ideal = best quality, slowest. Moderate = balanced. Worst = fastest cycle time, most aggressive cuts.
+  </Accordion>
+  <Accordion title="Facing">
+    The first machining operation in most setups. Cuts the top surface of the raw stock flat to create a clean, accurate reference surface. Always do this first.
+  </Accordion>
+  <Accordion title="Roughing">
+    Bulk material removal with heavy cuts. The goal is to remove as much material as possible quickly. Leaves a thin layer of material on all surfaces for the finishing pass.
+  </Accordion>
+  <Accordion title="Finishing">
+    Light passes with low depth of cut and fine feeds to achieve the final part dimensions and surface finish.
+  </Accordion>
+  <Accordion title="Spot Drilling">
+    A short, stubby drill used to create a small conical center mark at each hole location before the full drill goes in. Prevents the drill from walking (sliding off position) when it first touches the surface.
+  </Accordion>
+  <Accordion title="Drilling">
+    Creating a hole using a rotating drill bit.
+  </Accordion>
+  <Accordion title="Reaming">
+    A precision pass made inside an already-drilled hole using a reamer tool. Done to achieve a very tight diameter tolerance — typically ±0.01 mm or better. Reamed holes are smooth and accurate.
+  </Accordion>
+  <Accordion title="ITR (Intelligent Tool Recommender)">
+    The fourth step of a Neuramill session. The AI that selects the best cutting tool for each operation and calculates speeds and feeds.
+  </Accordion>
+  <Accordion title="Spindle Speed (RPM)">
+    How fast the cutting tool rotates — revolutions per minute. Programmed as the S word in G-code: S8000 = 8,000 RPM.
+  </Accordion>
+  <Accordion title="Feedrate">
+    How fast the cutting tool moves through the material (sideways). Programmed as the F word in G-code: F1200 = 1,200 mm/min.
+  </Accordion>
+  <Accordion title="Plunge Feedrate">
+    How fast the tool moves straight down into the material (Z-axis direction). Always slower than the cutting feedrate — plunging puts more axial load on the tool and spindle.
+  </Accordion>
+  <Accordion title="S Word">
+    G-code command for spindle speed. S8000 means set the spindle to 8,000 RPM.
+  </Accordion>
+  <Accordion title="F Word">
+    G-code command for feedrate. F1200 means move at 1,200 mm/min.
+  </Accordion>
+  <Accordion title="Chip Load">
+    The thickness of material each cutting flute removes per revolution. Measured in mm or inches. Used to calculate feedrate: Feedrate = RPM × Flutes × Chip Load.
+  </Accordion>
+  <Accordion title="Taper">
+    The spindle interface type on a CNC machine — for example, CT40, BT40, or HSK-A63. Determines which tool holders can be mounted in the spindle.
+  </Accordion>
+  <Accordion title="TLO (Tool Length Offset)">
+    The distance from the spindle face to the tip of the cutting tool. You measure this and enter it into the CNC controller so the machine knows exactly where the tool tip is in space.
+  </Accordion>
+  <Accordion title="Owned (badge)">
+    A green badge shown on a tool card in the ITR step. Means this tool is already in your company's physical tool inventory.
+  </Accordion>
+  <Accordion title="OD Profile">
+    Outer Diameter Profile — a feature classification for the outside contour of a part. Created by multi-face selection in the Direction of Cut step.
+  </Accordion>
+  <Accordion title="3D Surface">
+    A feature classification for complex sculpted or free-form surfaces that span multiple faces and require 3D surfacing toolpaths.
+  </Accordion>
+  <Accordion title="Toggle Stock">
+    Toolbar tool #8. Turns the semi-transparent stock box overlay on and off in the 3D viewer.
+  </Accordion>
+  <Accordion title="Toggle Wireframe">
+    Toolbar tool #6. Switches between solid model view (surfaces visible) and wireframe view (only edges and outlines visible). Wireframe lets you see through the part to hidden geometry.
+  </Accordion>
+  <Accordion title="Toggle Axes">
+    Toolbar tool #7. Snaps the camera to look straight at the currently selected or highlighted face. Like clicking "Top View" or "Front View" in your CAD software.
+  </Accordion>
+  <Accordion title="Chatter">
+    A loud, rapid vibration (rattling or screaming sound) that happens when the cutting tool is removing material too aggressively for the stiffness of the setup. Chatter damages the part surface, the tool, and eventually the spindle. If you hear it: stop the machine, reduce the feedrate or depth of cut, and check your Rigidity setting in Neuramill.
+  </Accordion>
+  <Accordion title="L/D Ratio (Length-to-Diameter Ratio)">
+    The length of the cutting portion of a tool divided by its diameter. A high L/D ratio (long, thin tool) is more prone to deflection and chatter. Neuramill considers L/D when selecting tools — preferring shorter, stiffer tools wherever possible.
+  </Accordion>
+</AccordionGroup>

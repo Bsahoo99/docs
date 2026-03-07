@@ -1,0 +1,40 @@
+---
+title: "Classify complex surfaces"
+description: "How to select multiple faces at once and classify them together as an OD Profile or 3D Surface."
+---
+For parts with complex outer profiles or large curved surfaces that span multiple faces, you can **select multiple faces at once** and classify them together as a single feature.
+
+## When to Use This
+
+- Your part has a **stepped or profiled outer contour** that wraps around multiple faces → use **OD Profile**
+- Your part has **sculptured or free-form surfaces** that require 3D toolpaths → use **3D Surface**
+
+## Select Multiple Faces
+
+<Steps>
+  <Step title="Hold Ctrl (or Cmd on Mac)">
+    Hold the **Ctrl** key on your keyboard (or **Cmd** if you are on a Mac).
+  </Step>
+  <Step title="Click each face you want to include">
+    While holding Ctrl/Cmd, click on each face of the 3D model that should be part of this feature.
+    Each face you click highlights in a different color to show it is selected.
+    
+    ![Multiple faces selected with OD Profile and 3D Surface options](/images/onboarding/screenshots/s29-direction-multi-select-advanced-classification.webp)
+  </Step>
+  <Step title="See the floating bar at the bottom">
+    Once you have selected faces, a **floating bar** appears at the very bottom of the 3D viewer area. It shows two buttons: **OD Profile** and **3D Surface**.
+  </Step>
+  <Step title="Click OD Profile or 3D Surface">
+    Click the classification that matches your feature.
+    A submenu appears asking you to choose the **setup direction** (Top, Bottom, Front, Back, Left, Right).
+    As you hover over each direction option, the selected faces preview in a different color — this helps you confirm the right approach direction.
+  </Step>
+  <Step title="Choose the direction">
+    Click your chosen direction.
+    A new feature card is created for that classification and added to the feature list.
+  </Step>
+</Steps>
+
+<Tip>
+If you selected the wrong faces, click anywhere on the grey background (away from the model) to deselect everything, then start the selection again.
+</Tip>

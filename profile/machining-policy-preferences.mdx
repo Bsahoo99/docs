@@ -1,0 +1,74 @@
+---
+title: "Manage machining policy settings"
+description: "Set your default cutting rules. Neuramill applies these to every new job automatically."
+---
+A **Machining Policy** is a set of cutting rules that Neuramill uses when generating speeds, feeds, and cutting parameters for your jobs.
+
+Think of it like dialing in your preferences once — and every new job automatically uses those settings.
+
+## Three Tiers
+
+Every policy belongs to one of three tiers. The tier tells Neuramill how aggressively to cut:
+
+| Tier | What It Prioritizes | When to Use It |
+|------|--------------------|-|
+| **Ideal** | Best surface finish and part quality. Slower cycle time. | Quality jobs where surface finish matters. |
+| **Moderate** | Balanced — decent quality, reasonable cycle time. | Most everyday production work. |
+| **Worst** | Fastest cycle time. Acceptable quality. | When speed matters more than finish. |
+
+<Note>
+Despite the name, **"Worst"** is not bad practice. It means fastest and most aggressive in the speed-vs-quality trade-off. Many shops use it for roughing passes.
+</Note>
+
+## Base Policies and Custom Policies
+
+**Base Policies** are built in by Neuramill. They are the default rules used if you do not create your own. You cannot delete a Base Policy — you can only toggle it on or off.
+
+**Custom Policies** are rules you create yourself. They override the base policy for the operations they cover. You can have as many custom policies as you want, and you can edit or delete them.
+
+## Active and Inactive Policies
+
+Each policy has a **toggle switch** next to its name.
+
+| Toggle State | What It Means |
+|--------------|---------------|
+| **ON** (switch lit up) | This policy is active and will be applied to new sessions |
+| **OFF** (switch greyed out) | This policy exists but is not currently being used |
+
+This lets you switch between setups — for example, toggle your aluminium policy on and your steel policy off — without deleting either one.
+
+**To toggle a policy:** Click the toggle switch. It changes state immediately. No Save button needed.
+
+![Policy list with one policy ON and one policy OFF](/images/onboarding/screenshots/s16-policy-toggle-on-off.webp)
+
+## Creating a New Custom Policy
+
+<Steps>
+  <Step title="Find the tier you want to add to">
+    On the My Profile page, scroll to the Machining Policy Preferences section. Find the tier column — Ideal, Moderate, or Worst — where you want to add a policy.
+  </Step>
+  <Step title="Click + Add Policy">
+    Click the **+ Add Policy** button for that tier.
+  </Step>
+  <Step title="Fill in the form">
+    Give your policy a name (e.g., "Aluminium Finishing Policy"). Fill in the cutting parameter values and any conditions that apply.
+    
+    ![Machining policy preferences with tier columns and add policy action](/images/onboarding/screenshots/s15-machining-policy-tiers-add-policy.webp)
+  </Step>
+  <Step title="Click Save">
+    Click **Save**. Your new policy appears in the list.
+  </Step>
+</Steps>
+
+## Editing and Deleting Custom Policies
+
+- **To edit:** Click the **pencil icon** on the policy row. The form reopens with existing values. Make your changes and click **Save**.
+- **To delete:** Click the **trash icon** on the policy row. A confirmation dialog appears. Click **Confirm**.
+
+<Warning>
+Deleting a custom policy cannot be undone. If you are not sure, toggle it **inactive** instead of deleting it.
+</Warning>
+
+<Note>
+You cannot edit Base Policies — only toggle them active or inactive.
+</Note>

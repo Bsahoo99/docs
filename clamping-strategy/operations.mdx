@@ -1,0 +1,34 @@
+---
+title: "Review strategy operations"
+description: "After approving a strategy, expand the card to see the list of machining operations for that setup."
+---
+After approving a strategy, a **strategy card** appears. Click it to expand and see the full list of **machining operations** (called passes) for that setup.
+
+![Expanded strategy card with numbered operation list](/images/onboarding/screenshots/s40-clamping-expanded-operation-list.webp)
+
+## Operation meanings
+
+| Operation | What It Is in Plain Language |
+|-----------|------------------------------|
+| **#1 FACING** | Cuts the top surface of the stock flat. **This is almost always the first operation** — it creates a clean, flat reference surface. Every machinist knows: face it first. |
+| **#2 ROUGHING** | Removes the bulk of the material quickly. Heavy cuts, not worrying about surface finish yet. Leaves a thin layer of material for the finishing pass. |
+| **#3+ FINISHING** | Light passes to achieve final dimensions and surface finish. There may be multiple finishing passes for different surfaces. |
+| **SPOT DRILLING** | Creates a small center-point mark before drilling. Prevents the drill from walking (drifting) off the intended hole center. |
+| **DRILLING** | Creates the hole using a rotating drill bit. |
+| **REAMING** | A precision pass inside a drilled hole to hit a very tight diameter tolerance. Only appears if reaming was enabled in the Direction of Cut step. |
+
+## Strategy card header
+
+The collapsed strategy card header shows:
+
+| Element | What It Shows |
+|---------|--------------|
+| Strategy number | Auto-named: Strategy 1, Strategy 2, etc. |
+| Pass count | How many operations are in this setup |
+| Feature count | How many features are covered |
+| Fixture type | The workholding device you selected |
+| Face badges | Red = Datum, Orange = Blocked, Green = Accessible |
+
+<Card title="Manage features in operations" icon="arrow-right" href="/clamping-strategy/managing-features">
+  How to add, remove, or reorder features and operations.
+</Card>

@@ -1,0 +1,32 @@
+---
+title: "Understand clamping strategy"
+description: "Clamping Strategy is where you define how the part will be held on the machine for each setup."
+---
+Every machinist knows this from years in the shop: when you machine a part, you have to hold it. The fixture — whether it is a vise, clamps, chuck, or dedicated fixture plate — physically covers some faces of the part. Those covered faces **cannot be machined** in that setup.
+
+In Neuramill, you define a **clamping strategy** for each setup. A strategy tells Neuramill:
+
+1. Which face is sitting down on the fixture (**the datum face**)
+2. What kind of fixture you are using
+3. Which other faces the fixture is touching (**blocked faces**)
+
+Neuramill uses this to check that every detected feature is accessible in at least one of your strategies. Any feature that is not covered by any strategy shows up as **Remaining** — it would not get machined if you left it that way.
+
+**Your goal: get the Remaining count to zero.**
+
+![Collapsed clamping strategy card with pass and feature summary badges](/images/onboarding/screenshots/s39-clamping-collapsed-strategy-card.webp)
+
+## A Simple Two-Setup Example
+
+Most prismatic parts (rectangular blocks) need at least two setups:
+
+| Setup | Part Position | What Gets Machined |
+|-------|--------------|-------------------|
+| **Setup 1** | Part resting on Bottom face | Everything accessible from the Top, Front, Back, Left, Right |
+| **Setup 2** | Flip the part — now resting on Top face | Everything accessible from the Bottom |
+
+You define both setups as separate strategies in Neuramill. The system checks that between the two strategies, every feature is covered.
+
+<Card title="Start: The Feature Distribution Tracker" icon="arrow-right" href="/clamping-strategy/feature-distribution">
+  The counters at the top of the panel that tell you how many features are still uncovered.
+</Card>

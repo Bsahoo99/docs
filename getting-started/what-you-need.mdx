@@ -1,0 +1,49 @@
+---
+title: "Prepare for your first session"
+description: "Have these items ready before you start your first Neuramill session."
+---
+Before you start, gather these items. The more prepared you are, the smoother your first session will go.
+
+## Required Items
+
+| Item | Details | Where to Get It |
+|------|---------|----------------|
+| **Neuramill account** | Created by you or set up by your company admin | See [Creating Your Account](/your-account/creating-your-account) |
+| **CAD file** | A `.STEP` or `.STP` file of the part you want to machine | From the person or software that made the part drawing |
+| **Material name** | The exact alloy, not just the generic family | From the job order or engineering drawing |
+| **Machine name** | Which CNC machine you plan to use | Your shop's machine list |
+| **Stock dimensions** | The X × Y × Z size of your raw material block, in mm or inches | Measure your stock or check your material order |
+
+## Optional but Helpful
+
+| Item | Details |
+|------|---------|
+| **GD&T drawing** | A `.PDF` or `.TIFF` file of the engineering drawing with tolerances. If you have tight-tolerance features, upload this — Neuramill will use it to set tighter cutting parameters. |
+
+<Warning>
+**The CAD file must be in STEP format.** Neuramill does not accept `.STL`, `.OBJ`, `.DXF`, or other formats. If you have a different file type, ask the person who made the drawing to export it as STEP.
+</Warning>
+
+## A Note on File Format
+
+**STEP** (also written as `.stp`) is a universal 3D file format that every major CAD software can export. If your drawing is in SolidWorks, Fusion 360, CATIA, Siemens NX, or any other system, there is a "Save As" or "Export" option that produces a STEP file.
+
+If you are not sure how to get a STEP file, show this page to the CAD operator at your shop.
+
+## Check This Before You Upload
+
+<AccordionGroup>
+  <Accordion title="My STEP file has extra geometry in it (reference planes, assembly components)">
+    Remove those before uploading. Extra geometry confuses the AI — it tries to find machining operations for things that should not be machined. Ask the CAD operator to export only the workpiece, nothing else.
+  </Accordion>
+  <Accordion title="I don't know what material the part is">
+    Check the engineering drawing — it is usually listed in the title block. If it says something like "6061-T6 AL" that means Aluminium 6061-T6. Use the most specific name you can find.
+  </Accordion>
+  <Accordion title="I don't have a GD&T drawing">
+    That is fine. You can run Neuramill with the CAD file only. You will not get tolerance-specific recommendations, but the tool and speed/feed output will still be useful.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Ready? Create Your Account" icon="arrow-right" href="/your-account/creating-your-account">
+  Once you have your files ready, the next step is creating your Neuramill account.
+</Card>

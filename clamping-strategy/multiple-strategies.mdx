@@ -1,0 +1,40 @@
+---
+title: "Add another clamping strategy"
+description: "How to add more clamping strategies when one strategy is not enough to cover all features."
+---
+After approving your first strategy, check the **Remaining** counter at the top of the panel.
+
+If Remaining is still above zero, some features are on faces that are blocked in your first strategy. You need to add another strategy for a different clamping orientation.
+
+## Flip Strategy (Most Common Case)
+
+The most common solution is a simple flip: turn the part over and clamp it from the other side.
+
+| Strategy | Part Position | What Gets Machined |
+|----------|--------------|-------------------|
+| **Strategy 1** | Bottom face down. Top face accessible. | All top features machined. |
+| **Strategy 2** | Flip — Top face down. Bottom face accessible. | All bottom features machined. |
+
+After Strategy 2 is approved, the Remaining counter should drop to zero (or very close to it).
+
+## Add a Second Strategy
+
+1. Click **+ Add Clamping Strategy** again.
+2. Fill in the form exactly as before — but this time with the new orientation.
+3. When you approve, check the Remaining counter again.
+4. Repeat until Remaining = 0.
+
+![Two strategies visible with Remaining count decreasing](/images/onboarding/screenshots/s42-clamping-two-strategies-remaining-decrease.webp)
+
+## When Remaining Cannot Reach Zero
+
+Some parts have features in locations that are physically impossible to reach with standard clamping — for example, a hole in the very center of the bottom face that would be blocked by any fixture.
+
+In those cases:
+- Add a note to the strategy about the inaccessible feature
+- Flag the feature or set it aside
+- Accept that it will need to be machined in a special operation not covered by this plan
+
+<Tip>
+If you are stuck with a non-zero Remaining count and cannot figure out how to cover the remaining features, think about it the way you would on the shop floor: *"If I had this part in my hands, how would I hold it to reach that feature?"* Then configure that clamping orientation as a new strategy.
+</Tip>

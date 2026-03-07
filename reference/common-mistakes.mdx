@@ -1,0 +1,89 @@
+---
+title: "Avoid common mistakes"
+description: "The most frequent errors new users make — and how to avoid every one of them."
+---
+
+## Before Uploading
+
+<AccordionGroup>
+  <Accordion title="Uploading the wrong file type">
+    Neuramill only accepts `.STEP` or `.STP` files. If you upload an `.STL`, `.OBJ`, or any other format, the system will reject it or give bad results.
+    
+    **Fix:** Ask the CAD operator to export as STEP format. Every major CAD software can do this.
+  </Accordion>
+  <Accordion title="Uploading an assembly file instead of just the part">
+    If the STEP file contains an entire assembly (multiple parts), Neuramill will find features on every component — most of which should not be machined.
+    
+    **Fix:** Ask the CAD operator to export only the workpiece geometry, nothing else.
+  </Accordion>
+  <Accordion title="Not having the stock dimensions ready">
+    Many users click through to the Machining Setup step and then have to stop to go measure their stock. That breaks the workflow.
+    
+    **Fix:** Measure your stock or check your material order before you start.
+  </Accordion>
+</AccordionGroup>
+
+## Step 1 — Direction of Cut
+
+<AccordionGroup>
+  <Accordion title="Rushing through the feature review">
+    The most expensive mistake in the entire session. If you approve a feature with the wrong direction or wrong dimensions, that error flows through to wrong clamping assignments and wrong tool recommendations.
+    
+    **Fix:** Check every feature card. Use Grid View to work through the list row by row.
+  </Accordion>
+  <Accordion title="Flagging features that should not be flagged">
+    Flagged features are completely excluded from the machining plan. If you flag a real feature by accident, it gets no tool, no operation, and will not appear in your Summary.
+    
+    **Fix:** Only flag features you are 100% certain are wrong. When in doubt, leave it and check with the engineer who made the drawing.
+  </Accordion>
+</AccordionGroup>
+
+## Step 2 — Machining Setup
+
+<AccordionGroup>
+  <Accordion title="Selecting the generic material instead of the specific alloy">
+    Selecting "Aluminium" instead of "Aluminium 6061-T6" gives much less accurate speed and feed calculations.
+    
+    **Fix:** Always select the most specific alloy code available in the dropdown. Check the engineering drawing or job order for the exact alloy.
+  </Accordion>
+  <Accordion title="Setting Rigidity too high on a thin-walled part">
+    Too high a rigidity setting tells Neuramill to calculate aggressive cuts. On a thin-walled part, that causes chatter — a loud, damaging vibration.
+    
+    **Fix:** For thin-walled parts (walls under 3 mm), start at Low. For standard blocks, start at Medium. You can always increase it after a successful first run.
+  </Accordion>
+  <Accordion title="Clicking Approved without seeing the green Stock Validated banner">
+    If you approve with invalid stock, later steps produce errors.
+    
+    **Fix:** Do not click Approve until you see the green "Stock is valid for this machine and CAD part" banner.
+  </Accordion>
+</AccordionGroup>
+
+## Step 3 — Clamping Strategy
+
+<AccordionGroup>
+  <Accordion title="Approving with Remaining > 0">
+    Features that are not covered by any strategy will not appear in your machining plan. They get no tool, no operation.
+    
+    **Fix:** Always check the Remaining counter before clicking Complete Setup. If it is not zero, add another strategy for the missing faces.
+  </Accordion>
+  <Accordion title="Forgetting to save after reordering operations">
+    If you drag operations into a new order but do not click the Save icon, the reordering is lost when you click away.
+    
+    **Fix:** The moment you see "Unsaved" text on the strategy card, click the save icon immediately — before clicking anything else.
+  </Accordion>
+</AccordionGroup>
+
+## Step 4 — Tool Recommender
+
+<AccordionGroup>
+  <Accordion title="Running at 100% feedrate the very first time">
+    Neuramill gives you calculated targets. Your specific setup — how the part is actually sitting, how worn your spindle is, how well the vise is holding — can be slightly different from the model. Running at full speed on the first pass on a new program is a risk.
+    
+    **Fix:** Set feedrate override to 50% for the first pass. Ramp up once the cut looks and sounds stable.
+  </Accordion>
+  <Accordion title="Changing RPM without adjusting feedrate">
+    RPM and feedrate are linked: `Feedrate = RPM × Flutes × Chip Load`. If you override the RPM, the feedrate does not update automatically.
+    
+    **Fix:** If you change RPM, calculate and enter the new feedrate manually.
+  </Accordion>
+</AccordionGroup>

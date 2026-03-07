@@ -1,0 +1,54 @@
+---
+title: "Understand speeds and feeds"
+description: "What RPM, cutting feedrate, and plunge feedrate mean — and how to use these numbers at the machine."
+---
+The **Machining Parameters** section on each tool card gives you three numbers. These are the numbers you program into your CNC machine.
+
+{/* TODO: Add screenshot — Machining Parameters section on a tool card — Spindle Speed (RPM), Cutting Feedrate, and Plunge Feedrate all labeled with example values */}
+
+## Three Parameters
+
+| Parameter | What It Is | How You Use It at the Machine |
+|-----------|-----------|-------------------------------|
+| **Spindle Speed (RPM)** | How fast the tool spins — revolutions per minute. Example: 8,000 RPM | Enter as your **S word** in the G-code program: `S8000` |
+| **Cutting Feedrate** (mm/min or IPM) | How fast the tool moves sideways through the material. Example: 1,200 mm/min | Enter as your **F word** on the cutting moves: `F1200` |
+| **Plunge Feedrate** (mm/min or IPM) | How fast the tool moves straight down into the material. Always slower than the cutting feedrate — plunging is harder on the tool. Example: 400 mm/min | Use this F word on your plunge (Z-down) moves: `F400` |
+
+## A Real-World Example
+
+Say the tool card shows:
+- Spindle Speed: **8,100 RPM**
+- Cutting Feedrate: **1,350 mm/min**
+- Plunge Feedrate: **400 mm/min**
+
+In your G-code program, you would write:
+```
+S8100 M03          (spindle on, 8100 RPM)
+G01 Z-5 F400       (plunge down 5mm at 400 mm/min)
+G01 X50 F1350      (cut sideways at 1350 mm/min)
+```
+
+## Your First Run — Start at 50%
+
+<Warning>
+**On the first time you run a new program generated from Neuramill, set your machine's feedrate override dial to 50%.**
+
+Run the first pass. Listen to the cut. Watch the chips.
+
+- Chips should be curling away cleanly — not powdery, not stringy
+- The sound should be a consistent hum — not a screech or chatter
+- The spindle load meter should be steady, not spiking
+
+If everything looks and sounds good, ramp up to 75%, then 100%.
+
+Neuramill gives you the calculated target values. You verify they are right for your specific setup.
+</Warning>
+
+## If the Feedrate Feels Wrong
+
+If the calculated feedrate seems too aggressive or too conservative for the way you work, you can override it. See [Manual Override](/tool-recommender/manual-override).
+
+The relationship between the parameters is:
+> **Feedrate = RPM × Flutes × Chip Load**
+
+If you change RPM, check the feedrate too — they are linked.
