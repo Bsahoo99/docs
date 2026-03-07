@@ -1,0 +1,51 @@
+---
+title: "Enter stock dimensions"
+description: "How to enter the dimensions of your raw material block and use the Bounding Box button."
+---
+The **Stock Size** fields are in the lower-right section of the Machining Setup panel. You type in the dimensions of the raw block of material you are starting from.
+
+## X, Y, and Z dimensions
+
+| Field | What It Measures |
+|-------|-----------------|
+| **X** | Width of the stock block — left to right |
+| **Y** | Depth of the stock block — front to back |
+| **Z** | Height of the stock block — bottom to top |
+
+All measurements are in the unit system currently selected (mm or in). Check the toolbar to confirm — click **mm** or **in** in the top-right of the toolbar if you need to switch.
+
+## Enter Stock Dimensions
+
+<Steps>
+  <Step title="Click inside the X field">
+    Click inside the field labeled **X**. A cursor appears.
+    Type the width of your stock block.
+  </Step>
+  <Step title="Click inside the Y field">
+    Click inside the **Y** field and type the depth.
+  </Step>
+  <Step title="Click inside the Z field">
+    Click inside the **Z** field and type the height.
+  </Step>
+  <Step title="Watch the 3D viewer update">
+    As you type, the 3D viewer on the left updates to show a semi-transparent grey stock box around your part. You can see whether the stock fully encloses the part.
+    
+    ![Stock size values entered with stock overlay visible](/images/onboarding/screenshots/s34-machining-stock-size-with-overlay.webp)
+  </Step>
+</Steps>
+
+## Bounding Box Button
+
+Next to the Stock Size label, there is a **Bounding Box** button. Click it to automatically fill in the **minimum possible dimensions** that exactly fit around your part with zero extra material.
+
+Use this as a starting point — then add extra material on each face as needed for your actual stock.
+
+**Example:** If your part is 48 × 48 × 18 mm, clicking Bounding Box fills in 48 × 48 × 18. Then you would change it to 50 × 50 × 20 to match the stock you actually have.
+
+## Checking the Stock Overlay in the Viewer
+
+Use **toolbar tool #8 (Toggle Stock)** to turn the transparent stock overlay on and off if it is blocking your view. When the stock box is visible, check that:
+- The entire part sits **inside** the stock box
+- There is a reasonable amount of extra material on all sides (for clamping and facing)
+
+If any part of the model sticks outside the box, your stock is too small — increase the dimensions.

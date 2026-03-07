@@ -1,0 +1,33 @@
+---
+title: "Validate stock and approve setup"
+description: "After entering stock dimensions, Neuramill validates them. Look for the green banner before approving."
+---
+After you enter stock dimensions, Neuramill checks whether the stock is large enough to contain the part and fits within the machine's work envelope.
+
+## Validation result
+
+| Result | What You See | What to Do |
+|--------|-------------|------------|
+| **✓ Stock Validated** | Green banner: *"Stock is valid for this machine and CAD part."* | You are ready to approve and move forward. |
+| **Stock Too Small** | Red or orange warning banner | Increase one or more of the X, Y, or Z dimensions. Keep adjusting until the warning disappears and the green banner appears. |
+| **Warning** | Yellow notice | Stock is technically large enough but tight. Review carefully before proceeding. |
+
+![Stock validated success banner](/images/onboarding/screenshots/s35-machining-stock-validated-banner.webp)
+
+<Warning>
+Do not click the **Machining Setup Approved** button until you see the green "Stock Validated" banner. Proceeding with invalid stock will cause errors in later steps.
+</Warning>
+
+## Approving Machining Setup
+
+Once all four fields are set (Material, Machine, Rigidity, Stock) and the stock shows as validated:
+
+1. Click the **Machining Setup Approved** button at the very bottom of the right panel.
+2. The button changes to a green **✓ Approved** badge.
+3. The **Clamping Strategy** step unlocks in the navigation bar.
+
+{/* TODO: Add screenshot — Machining Setup Approved button — before clicking (blue) and after clicking (green Approved badge) */}
+
+<Card title="Next: Step 3 — Clamping Strategy" icon="arrow-right" href="/clamping-strategy/what-is-clamping">
+  Define how the part will be held and make sure every feature is accessible.
+</Card>

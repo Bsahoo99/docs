@@ -1,0 +1,31 @@
+/*
+ * Global media framing for docs content.
+ * Applies to markdown/MDX images and videos in page content only.
+ */
+
+:root {
+  --nm-media-border-light: rgba(31, 94, 149, 0.22);
+  --nm-media-bg-light: #ffffff;
+  --nm-media-shadow-light: 0 8px 22px rgba(15, 23, 42, 0.06);
+
+  --nm-media-border-dark: rgba(74, 143, 206, 0.4);
+  --nm-media-bg-dark: rgba(11, 18, 32, 0.28);
+  --nm-media-shadow-dark: 0 10px 24px rgba(2, 6, 23, 0.45);
+
+  --nm-media-radius: 10px;
+}
+
+/* Standard markdown content containers used by Mintlify pages */
+:is(.prose, [class*="prose"], [data-content], [data-mdx-content]) :is(img, video) {
+  border: 1px solid var(--nm-media-border-light);
+  border-radius: var(--nm-media-radius);
+  background: var(--nm-media-bg-light);
+  box-shadow: var(--nm-media-shadow-light);
+}
+
+/* Dark theme adjustments for better contrast and depth */
+.dark :is(.prose, [class*="prose"], [data-content], [data-mdx-content]) :is(img, video) {
+  border-color: var(--nm-media-border-dark);
+  background: var(--nm-media-bg-dark);
+  box-shadow: var(--nm-media-shadow-dark);
+}

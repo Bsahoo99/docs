@@ -1,0 +1,41 @@
+---
+title: "Change feature setup direction"
+description: "How to move a feature from one face direction to another when the AI assigned it to the wrong face."
+---
+The AI assigns each feature to a direction based on the part geometry. It is usually right — but not always. If a feature is assigned to the wrong face, or if you prefer to approach it from a different direction, you can change it.
+
+## Change a Feature's Direction
+
+<Steps>
+  <Step title="Find the feature card for that feature">
+    In CAD View, Setup View, or Grid View — find the feature card for the feature you want to change.
+  </Step>
+  <Step title="Click on the feature card">
+    Left-click anywhere on the feature card — not on the flag icon or the operations dropdown arrow. Just click the card itself.
+    
+    A small popup menu appears, labeled **MOVE TO SETUP**.
+    
+    ![Move to setup popup with six direction options](/images/onboarding/screenshots/s26-direction-move-to-setup-popup.webp)
+  </Step>
+  <Step title="Find the current direction">
+    The direction currently assigned has a **solid filled black dot** (●) next to it. The others have open circles.
+  </Step>
+  <Step title="Click your new direction">
+    Click the colored dot next to the direction you want to assign this feature to.
+    
+    The feature card's direction badge updates immediately to the new direction and color.
+    The 3D model also updates to reflect the change.
+  </Step>
+</Steps>
+
+<Tip>
+If you click the wrong direction by accident, just click the feature card again and correct it. **No Save button is needed** — changes happen immediately and are stored automatically.
+</Tip>
+
+## When Would You Change a Direction?
+
+| Situation | What to Do |
+|-----------|-----------|
+| The AI put a top-face hole under "Front" | Click the feature card → MOVE TO SETUP → Top |
+| You want to drill all holes from the Top even if some are on the side | Reassign side holes to Top |
+| You are flipping your clamping strategy and want all bottom features together | Move bottom features to Bottom |

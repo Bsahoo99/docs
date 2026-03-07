@@ -1,0 +1,49 @@
+---
+title: "Review tool recommendations"
+description: "Step 4 is where Neuramill picks the best cutting tool for each operation and calculates the speeds and feeds."
+---
+The **Intelligent Tool Recommender (ITR)** is where Neuramill selects the best cutting tool for each machining operation and calculates the speeds and feeds to run those tools.
+
+This step answers the questions every machinist has before running a job:
+- *Which end mill do I use for this pocket?*
+- *What RPM do I set?*
+- *What feedrate?*
+
+## Selecting Optimal Tools
+
+<Steps>
+  <Step title="Find the Select Optimal Tools button">
+    In the Intelligent Tool Recommender panel, find the blue **Select Optimal Tools** button.
+  </Step>
+  <Step title="Click it">
+    Click the button. A brief loading indicator appears while the system searches your tool library.
+  </Step>
+  <Step title="See the results">
+    When complete, a green **✓ Tools Selected** badge appears. Each strategy now shows recommended tool cards for every operation pass.
+    
+    A summary bar shows how many Strategies, Operations, Features, and Tools are in this plan.
+    
+    {/* TODO: Add screenshot — ITR panel showing Select Optimal Tools button (blue) and Tools Selected badge (green). Summary bar below showing STRATEGIES / OPERATIONS / FEATURES / TOOLS counts. */}
+  </Step>
+</Steps>
+
+## ITR search scope
+
+By default, Neuramill searches your **company's tool library** — the tools your shop already has. On a Trial account, it uses the Neuramill general catalog instead.
+
+You can change what it searches using the filters. See [Tool Source Filters](/tool-recommender/tool-source-filters).
+
+<CardGroup cols={2}>
+  <Card title="Tool Source Filters" icon="filter" href="/tool-recommender/tool-source-filters">
+    Control which tool library the ITR searches through.
+  </Card>
+  <Card title="Reading a Tool Card" icon="id-card" href="/tool-recommender/reading-tool-cards">
+    Understand every field on a recommended tool card.
+  </Card>
+  <Card title="Speeds and Feeds Explained" icon="gauge" href="/tool-recommender/speeds-and-feeds">
+    What RPM, feedrate, and plunge rate mean — and how to use them at the machine.
+  </Card>
+  <Card title="Manual Override" icon="pen" href="/tool-recommender/manual-override">
+    Change a tool or override a cutting parameter.
+  </Card>
+</CardGroup>

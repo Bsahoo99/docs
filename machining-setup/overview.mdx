@@ -1,0 +1,37 @@
+---
+title: "Configure machining setup"
+description: "Step 2 is where you tell Neuramill about the physical parameters of your job: material, machine, rigidity, and stock size."
+---
+Machining Setup is where you tell Neuramill four things about the physical job:
+
+1. **What is the part made of?** (Material)
+2. **Which machine are you using?** (Machine)
+3. **How stiff is your setup?** (Rigidity)
+4. **How big is your raw stock block?** (Stock Size)
+
+These four inputs drive every cutting parameter calculation that follows. Getting them right here means better speeds, feeds, and tool recommendations in Step 4.
+
+![Full machining setup screen with material machine rigidity and stock panels](/images/onboarding/screenshots/s30-machining-setup-overview-full.webp)
+
+## Four Things to Set
+
+<CardGroup cols={2}>
+  <Card title="Material" icon="flask" href="/machining-setup/material">
+    Select the exact alloy your part is made from.
+  </Card>
+  <Card title="Machine" icon="gear" href="/machining-setup/machine">
+    Select the CNC machine you will be running this job on.
+  </Card>
+  <Card title="Rigidity" icon="dumbbell" href="/machining-setup/rigidity">
+    Tell Neuramill how stiff your setup is — this controls how aggressive the cuts will be.
+  </Card>
+  <Card title="Stock Size" icon="cube" href="/machining-setup/stock-size">
+    Enter the X × Y × Z dimensions of your raw material block.
+  </Card>
+</CardGroup>
+
+## Approving Features First
+
+At the very top of the Machining Setup panel, you will see an **Extracted Features** section. This is your last chance to review the features before they get locked in for the rest of the session.
+
+See [Approving Features](/machining-setup/approving-features) for how to do this.

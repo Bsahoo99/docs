@@ -1,104 +1,161 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "name": "Neuramill",
+  "appearance": {
+    "default": "light"
   },
-  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#1F5E95",
+    "light": "#4A8FCE",
+    "dark": "#2D6FA8"
+  },
+  "background": {
+    "light": "#F6F9FC",
+    "dark": "#0B1220"
+  },
+  "fonts": {
+    "family": "Geist Mono",
+    "weight": 400,
+    "heading": {
+      "family": "Geist Mono",
+      "weight": 700
+    }
+  },
+  "favicon": "/Favicon.png",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
+        "group": "Getting started",
+        "pages": [
+          "index",
+          "getting-started/what-is-neuramill",
+          "getting-started/what-you-need",
+          "getting-started/subscriptions",
+          "getting-started/user-roles"
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
+        "group": "Your account",
+        "pages": [
+          "your-account/creating-your-account",
+          "your-account/logging-in",
+          "your-account/forgot-password"
+        ]
+      },
+      {
+        "group": "Dashboard",
+        "pages": [
+          "dashboard/overview",
+          "dashboard/jobs-tab",
+          "dashboard/machines-tab",
+          "dashboard/tools-tab",
+          "dashboard/users-tab",
+          "dashboard/invitations-tab"
+        ]
+      },
+      {
+        "group": "Profile",
+        "pages": [
+          "profile/my-profile",
+          "profile/company-usage",
+          "profile/machining-policy-preferences"
+        ]
+      },
+      {
+        "group": "Starting a session",
+        "pages": [
+          "starting-a-session/what-is-a-session",
+          "starting-a-session/upload-cad-only",
+          "starting-a-session/upload-cad-and-gdt"
+        ]
+      },
+      {
+        "group": "3D viewer toolbar",
+        "pages": [
+          "viewer-toolbar/toolbar-overview",
+          "viewer-toolbar/select-and-pan",
+          "viewer-toolbar/measure-tool",
+          "viewer-toolbar/view-controls",
+          "viewer-toolbar/units-switcher"
+        ]
+      },
+      {
+        "group": "Step 1: Direction of cut",
+        "pages": [
+          "direction-of-cut/overview",
+          "direction-of-cut/cad-view",
+          "direction-of-cut/setup-view",
+          "direction-of-cut/grid-view",
+          "direction-of-cut/feature-cards",
+          "direction-of-cut/changing-setup-direction",
+          "direction-of-cut/flagging-features",
+          "direction-of-cut/advanced-classification",
+          "direction-of-cut/approving"
+        ]
+      },
+      {
+        "group": "Step 2: Machining setup",
+        "pages": [
+          "machining-setup/overview",
+          "machining-setup/approving-features",
+          "machining-setup/material",
+          "machining-setup/machine",
+          "machining-setup/rigidity",
+          "machining-setup/stock-size",
+          "machining-setup/stock-validation"
+        ]
+      },
+      {
+        "group": "Step 3: Clamping strategy",
+        "pages": [
+          "clamping-strategy/what-is-clamping",
+          "clamping-strategy/feature-distribution",
+          "clamping-strategy/adding-a-strategy",
+          "clamping-strategy/operations",
+          "clamping-strategy/managing-features",
+          "clamping-strategy/multiple-strategies",
+          "clamping-strategy/completing-setup"
+        ]
+      },
+      {
+        "group": "Step 4: Tool recommender",
+        "pages": [
+          "tool-recommender/overview",
+          "tool-recommender/tool-source-filters",
+          "tool-recommender/reading-tool-cards",
+          "tool-recommender/speeds-and-feeds",
+          "tool-recommender/manual-override"
+        ]
+      },
+      {
+        "group": "Step 5: Summary",
+        "pages": [
+          "summary/summary-view",
+          "summary/finalize"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "reference/checklist",
+          "reference/common-mistakes",
+          "reference/glossary"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/neuramill-light.svg",
+    "dark": "/logo/neuramill-dark.svg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Contact Support",
+        "href": "mailto:founders@neuramill.co"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
   "contextual": {
     "options": [
@@ -113,10 +170,6 @@
    ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "socials": {}
   }
 }

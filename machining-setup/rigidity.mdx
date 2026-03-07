@@ -1,0 +1,42 @@
+---
+title: "Set rigidity"
+description: "Rigidity tells Neuramill how stiff your setup is. It directly controls how aggressive the cutting parameters will be."
+---
+**Rigidity** is one of the most important settings in Machining Setup.
+
+It tells Neuramill how stiff the whole system is — the part itself, the way it is clamped, and the machine together. A stiffer setup can handle deeper, faster cuts. A less stiff setup needs lighter, more careful cuts.
+
+Click the **Rigidity** dropdown to see your four options.
+
+## Four Rigidity Levels
+
+| Level | Dropdown Description | When to Choose It |
+|-------|---------------------|-------------------|
+| **Low** | Light cuts, higher speeds | Thin-walled parts (walls less than 3 mm). Long, slender parts that could flex. Old or lightweight machines. **If you are not sure — start with Low.** It is the safest choice. |
+| **Medium** | Balanced approach | A solid block of material in a standard vise. Most everyday jobs on a modern 3-axis or 5-axis machine. **Start here for most jobs.** |
+| **High** | Heavy cuts, lower speeds | A heavy, blocky part in a heavy-duty vise with step jaws. Rigid fixture. Robust machine. |
+| **Very High** | Maximum material removal | Hydraulic clamping, tombstone fixtures, zero-point pallets. High-volume production runs. |
+
+![Rigidity dropdown with all options visible](/images/onboarding/screenshots/s33-machining-rigidity-dropdown.webp)
+
+## A Machinist's Rule of Thumb
+
+<Tip>
+On the **first run of a new part**, set Rigidity to **Medium**. Run it, listen to the cut, check the chips. If everything sounds stable and looks right, you can come back to Machining Setup, bump it up to High, and regenerate for better productivity.
+</Tip>
+
+<Warning>
+**Setting Rigidity too high for a thin-walled part is a common and costly mistake.**
+
+If the machine tries to cut faster and deeper than the part can handle, you will hear **chatter** — a loud rattling or screaming vibration from the spindle. If you hear that, stop the machine immediately. Come back here, lower the Rigidity setting, and regenerate before running again.
+</Warning>
+
+## Know Which Level to Pick
+
+Ask yourself these questions:
+
+- **Is the part thin-walled?** (walls thinner than 3 mm) → Low
+- **Is the part a solid block or a chunky casting?** → Medium or High
+- **Are you using a dedicated fixture, not just a vise?** → High or Very High
+- **Is this a roughing pass on a production machine?** → Very High may be appropriate
+- **Are you unsure?** → Medium. You can always come back and increase it later.

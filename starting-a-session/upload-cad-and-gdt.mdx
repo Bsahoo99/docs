@@ -1,0 +1,44 @@
+---
+title: "Upload CAD and GD&T"
+description: "How to start a session with both a STEP file and an engineering drawing."
+---
+Choose this option if you have both a STEP file and a 2D engineering drawing with tolerances (GD&T). Uploading both gives Neuramill more information and produces more accurate tool recommendations for tight-tolerance features.
+
+## Step-by-Step Instructions
+
+<Steps>
+  <Step title="Click + New Session on the Dashboard">
+    From the Dashboard, click the **+ New Session** button. The upload page opens.
+    You will see two upload zones side by side — the left is for CAD, the right is for GD&T.
+  </Step>
+  <Step title="Upload your STEP file to the LEFT zone">
+    Follow the same steps as in [Upload CAD Only](/starting-a-session/upload-cad-only) to attach your `.step` or `.stp` file to the **left** upload zone.
+    
+    Wait for the green checkmark and filename to appear before continuing.
+  </Step>
+  <Step title="Upload your drawing to the RIGHT zone">
+    The **right upload zone** is for your GD&T drawing.
+    
+    Accepted formats: `.PDF`, `.TIFF`, or `.TIF`
+    
+    Drag and drop the drawing file onto the right zone, or click inside it to browse for the file.
+    
+    ![Upload page with CAD and GD&T files attached and validated](/images/onboarding/screenshots/s19-upload-cad-gdt-both-attached.webp)
+  </Step>
+  <Step title="Confirm both zones show a green checkmark">
+    Both the left (CAD) and right (GD&T) zones should show a filename and a green checkmark. If either one is missing the checkmark, that file was not accepted — check the file format and try again.
+  </Step>
+  <Step title="Click View & Analyze">
+    A green button appears: **View & Analyze** (or **Upload CAD + GD&T**). Click it.
+    
+    Neuramill processes both files. This usually takes 10 to 30 seconds. A spinning indicator appears — do not close the browser tab while this is running.
+  </Step>
+</Steps>
+
+## Next steps
+
+After processing, you are taken to the **GD&T Viewer** first, where you can link drawing annotations to the 3D features. Then you proceed to Step 1 — Direction of Cut.
+
+<Note>
+If you uploaded a GD&T drawing, you will see an extra screen — the GD&T Viewer — before you reach Direction of Cut. This screen lets you connect tolerance callouts on the drawing to specific features on the 3D model.
+</Note>

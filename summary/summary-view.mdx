@@ -1,0 +1,57 @@
+---
+title: "Review the session summary"
+description: "Step 5 is a complete read-only review of your entire machining plan before you finalize it."
+---
+The Summary is the fifth and final tab in the session navigation bar. It shows a complete read-only review of everything configured in your session.
+
+## Get to the summary
+
+Click the **Summary** tab in the navigation bar at the top of the screen. The tabs read:
+
+> Direction of Cut → Machining Setup → Clamping Strategy → Intelligent Tool Recommender → **Summary**
+
+<Note>
+The Summary tab is greyed out until the Intelligent Tool Recommender step has been approved. If it will not click, go back and check that Step 4 shows a green "Tools Selected" badge.
+</Note>
+
+## Summary details
+
+The Summary is **view-only**. You cannot edit anything directly on this screen. It is organized into two sections.
+
+### Top Section — Setup Overview
+
+Three panels side by side:
+
+| Panel | What It Contains |
+|-------|-----------------|
+| **Machine** | Machine name, description, max speed, max torque, max rating, taper, max cutting feed |
+| **Material** | Material name, hardness range, yield strength, tensile strength |
+| **Stock & Rigidity** | Stock dimensions (X × Y × Z) and the selected rigidity level |
+
+### Lower Section — Strategies
+
+Each clamping strategy appears as a card showing:
+- The 6-face grid (red = datum, orange = blocked, green = accessible)
+- Fixture name and notes you entered
+- Every operation pass with: operation type, number of features, policy badge, and the selected tool card with all cutting parameters
+
+{/* TODO: Add screenshot — Summary view — top section showing Machine/Material/Stock panels, lower section showing a strategy card with the 6-face grid and operation list with tool cards */}
+
+## Read a summary operation row
+
+Each row in the strategy shows:
+
+| Element | What It Is |
+|---------|-----------|
+| Operation name | FACING, ROUGHING, FINISHING, DRILLING, etc. |
+| Feature count | How many features are in this pass |
+| Policy badge | Whether this uses the Default policy or a Custom policy, and which tier (Ideal / Moderate / Worst) |
+| Tool name | The selected tool |
+| Diameter | Tool diameter |
+| RPM | Spindle speed |
+| Feed | Cutting feedrate |
+| Plunge | Plunge feedrate |
+
+<Card title="Finalize a session" icon="arrow-right" href="/summary/finalize">
+  What happens when all steps are complete — and what "finalized" actually means.
+</Card>
