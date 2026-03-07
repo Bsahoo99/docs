@@ -2,7 +2,7 @@
 title: "Flag feature issues"
 description: "How to flag features the AI got wrong — either features that should not be machined, or features with incorrect dimensions."
 ---
-If the AI detected something that is wrong, you **flag** it. Flagging tells Neuramill to ignore that feature in all the downstream steps — it will not appear in clamping, policy, or tool recommendations.
+If the AI detected something that is wrong, you **flag** it. For most flags, Neuramill excludes that feature from all downstream steps — it will not appear in clamping, policy, or tool recommendations. **The "Wrong Dimensions" flag is an exception:** the feature stays in the plan so you can correct its dimensions directly on the card before the plan continues.
 
 <Warning>
 **Only flag features you are certain are wrong.** Flagged features are completely excluded from the rest of the plan. If you flag a real feature by mistake, it will not get a tool assigned and will not appear in your machining plan.
@@ -29,7 +29,7 @@ If the AI detected something that is wrong, you **flag** it. Flagging tells Neur
   <Step title="Choose the reason">
     A dialog box appears: **Flag Feature**.
     It has two checkboxes: **Extra Feature** and **Wrong Dimensions**.
-    Check the reason that applies. (You can check both if both are true.)
+    Select the single reason that applies — **Extra Feature** or **Wrong Dimensions**.
     
     ![Flag Feature dialog with Wrong Dimensions selected](/images/onboarding/screenshots/s27-direction-flag-feature-dialog.webp)
   </Step>
