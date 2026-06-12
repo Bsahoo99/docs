@@ -6,7 +6,7 @@ The **Machining Parameters** section on each tool card gives you three numbers. 
 
 {/* TODO: Add screenshot — Machining Parameters section on a tool card — Spindle Speed (RPM), Cutting Feedrate, and Plunge Feedrate all labeled with example values */}
 
-## Three Parameters
+## Three parameters
 
 | Parameter | What It Is | How You Use It at the Machine |
 |-----------|-----------|-------------------------------|
@@ -14,7 +14,7 @@ The **Machining Parameters** section on each tool card gives you three numbers. 
 | **Cutting Feedrate** (mm/min or IPM) | How fast the tool moves sideways through the material. Example: 1,200 mm/min | Enter as your **F word** on the cutting moves: `F1200` |
 | **Plunge Feedrate** (mm/min or IPM) | How fast the tool moves straight down into the material. Always slower than the cutting feedrate — plunging is harder on the tool. Example: 400 mm/min | Use this F word on your plunge (Z-down) moves: `F400` |
 
-## A Real-World Example
+## A real-world example
 
 Say the tool card shows:
 - Spindle Speed: **8,100 RPM**
@@ -28,7 +28,7 @@ G01 Z-5 F400       (plunge down 5mm at 400 mm/min)
 G01 X50 F1350      (cut sideways at 1350 mm/min)
 ```
 
-## Your First Run — Start at 50%
+## Your first run — start at 50%
 
 <Warning>
 **On the first time you run a new program generated from Neuramill, set your machine's feedrate override dial to 50%.**
@@ -44,7 +44,7 @@ If everything looks and sounds good, ramp up to 75%, then 100%.
 Neuramill gives you the calculated target values. You verify they are right for your specific setup.
 </Warning>
 
-## If the Feedrate Feels Wrong
+## If the feedrate feels wrong
 
 If the calculated feedrate seems too aggressive or too conservative for the way you work, you can override it. See [Manual Override](/tool-recommender/manual-override).
 

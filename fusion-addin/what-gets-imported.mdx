@@ -1,0 +1,61 @@
+---
+title: "What gets imported"
+description: "The setups, tools, and operations the Neuramill add-in builds in your Fusion 360 document."
+---
+When you import, the add-in builds three things in your Fusion document: setups, tools, and operations. If you kept the toolpath checkbox on, it also generates toolpaths — see [After import](/fusion-addin/after-import).
+
+## Setups
+
+The add-in creates one or more milling setups that match the orientation Neuramill computed for the part.
+
+| What you get | Detail |
+|--------------|--------|
+| Stock | A fixed box with explicit Width × Height × Depth |
+| WCS | A Work Coordinate System with an origin and axis flips set for you |
+| Part orientation | The part is oriented to match Neuramill's computed orientation |
+| Multiple setups | A multi-setup part creates multiple setups, one per clamping strategy |
+
+## Tools
+
+For each tool, the add-in first tries to reuse a tool you already have, then falls back to creating one.
+
+<Steps>
+  <Step title="Match an existing library tool">
+    The add-in matches each tool against your local and cloud Fusion tool libraries by product ID. When it finds a match, it reuses your tool number and geometry and applies Neuramill's speeds and feeds.
+  </Step>
+  <Step title="Create the tool from the payload">
+    When there is no match, the add-in creates the tool from the plan's data.
+  </Step>
+</Steps>
+
+Tool data includes:
+
+| Field | Detail |
+|-------|--------|
+| Type | End mill, ball mill, drill, tap, chamfer mill, thread mill, and more |
+| Geometry | Cutting diameter, flute length, overall length, shank diameter, flute count, corner radius |
+| Speeds and feeds | Neuramill's computed cutting parameters |
+
+<Note>
+Reusing a library tool keeps your shop's tool numbers and physical tool geometry. Only the speeds and feeds come from Neuramill.
+</Note>
+
+## Operations
+
+Each operation references a tool, carries its cutting parameters, and targets the exact faces or edges it machines.
+
+| Operation | What it does |
+|-----------|--------------|
+| Facing | Cleans up the top stock face |
+| Adaptive clearing | Roughs out material |
+| Parallel finishing | Finishes surfaces |
+| Drilling | Drills holes |
+| Boring | Bores holes to size |
+| Thread milling | Mills threads |
+| 2D chamfer | Chamfers edges (edge-based) |
+
+Operation parameters carried over include feeds, speeds, depths, and lead-in/lead-out.
+
+## Next step
+
+See [After import](/fusion-addin/after-import) for generating toolpaths and exporting NC code.

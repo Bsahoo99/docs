@@ -1,0 +1,29 @@
+---
+title: "Review machining policies"
+description: "The Policies area lists the machining rules that drive Neuramill's recommendations."
+---
+The **Policies** area lists the machining policies that drive Neuramill's recommendations. A policy maps a combination of feature, material, and machine to a set of operation parameters — for example roughing depth, finishing depth-of-cut, or thread-milling rules. When you plan a part, Neuramill uses these policies to decide which operations and parameters to suggest.
+
+Any team member can view and manage policies.
+
+{/* TODO: screenshot needed — Policies list with type, tier, and clamping strategy columns */}
+
+## Policy details
+
+Each policy in the list shows the following columns.
+
+| Column | What it means |
+|--------|---------------|
+| Policy type | The kind of machining rule, such as roughing, finishing, or thread milling. |
+| Tier | How aggressively tools are chosen for this policy — **Ideal**, **Moderate**, or **Worst**. Neuramill ships defaults, and you can customize them to match your tool-selection preference. |
+| Clamping strategies | The clamping strategies this policy is associated with. |
+
+For more on tiers, see [Machining policy preferences](/profile/machining-policy-preferences).
+
+## When to use this area
+
+Policies are advanced settings. Most planning work does not require you to open this area — Neuramill applies the relevant policy automatically as you move through a session.
+
+<Note>
+Policies map features and materials to operation parameters. To review the libraries that feed those mappings, see [Machining configuration](/dashboard/machining-config).
+</Note>

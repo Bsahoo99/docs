@@ -1,0 +1,91 @@
+---
+title: "Estimate a price with Quick Quote"
+description: "Use the Quick Quote calculator in the Summary step to turn a finished plan and your shop rates into a price estimate."
+sidebarTitle: "Quick Quote"
+tag: "Preview"
+---
+Quick Quote turns a finished plan into a rough price. It combines the cycle time Neuramill calculated with rates you enter — shop rate, material, tooling, and fixturing — and adds your margin to produce a quote.
+
+<Info>
+Quick Quote is an early preview and may change. Treat its output as a rough estimate, not a committed price.
+</Info>
+
+You open it from the **Summary** step, so finish the plan first. See [Review the session summary](/summary/summary-view) and [Estimate cycle time](/summary/cycle-time).
+
+## Open Quick Quote
+
+In the **Summary** step, find the cycle time area and click the **Quote** button (calculator icon). A draggable **Quick Quote** panel opens. Drag the panel by its top bar to move it, and close it with the **✕** when you are done.
+
+{/* TODO: screenshot needed — Summary step with the Quote button and the open Quick Quote panel */}
+
+<Note>
+Quotes are not saved. When you close the panel, the numbers are cleared — write down or screenshot the result if you need it.
+</Note>
+
+## Session context
+
+The top of the panel shows values pulled from your plan. These are read-only.
+
+| Value | Where it comes from |
+|-------|---------------------|
+| Machining time | The total machining time from the cycle time estimate |
+| Setup time | The total setup time from the cycle time estimate |
+| Setups | The number of clamping strategies in the plan |
+| Tools used | The number of unique tools selected |
+| Stock volume | Calculated from your stock dimensions, shown in cubic inches |
+
+## Your rates
+
+Enter your shop's rates. Every field is optional — a cost line only appears in the quote when you give it a value.
+
+| Field | Unit | Used for |
+|-------|------|----------|
+| Shop Rate | $/hr | Machine time and setup cost |
+| Material Cost | $/lb | Material cost |
+| Material Density | lb/in³ | Material cost |
+| Avg Tool Price | $ | Tool wear cost |
+| Avg Tool Life | min | Tool wear cost |
+| Fixture Cost | $ | A flat fixturing charge |
+
+<Warning>
+Quick Quote uses imperial units only — dollars per pound, pounds per cubic inch, and dollars per hour. The viewer unit switch (mm/in) does not change these fields.
+</Warning>
+
+## Outside processing
+
+Add any work done outside your shop — for example anodizing, heat treat, or plating. Click **Add Process**, give it a name and a cost, and it becomes a line in the quote. Remove a line with the **✕** next to it.
+
+## Margin
+
+Enter a **Margin** percentage. It is applied to the subtotal of all cost lines to produce the final quote.
+
+## How the quote is calculated
+
+Each cost is a line item; lines with a value above zero are summed into a subtotal, and your margin is added on top.
+
+| Line item | How it is estimated |
+|-----------|---------------------|
+| Material | Stock volume × material density × material cost per pound |
+| Machine Time | Machining hours × shop rate |
+| Setup | Setup hours × shop rate |
+| Tool Wear | (Total cutting minutes ÷ average tool life) × average tool price |
+| Fixture | The flat fixture cost you entered |
+| Outside processes | Each process cost you added |
+
+The panel then shows:
+
+<Steps>
+  <Step title="Subtotal">
+    The sum of every cost line above.
+  </Step>
+  <Step title="Margin">
+    The subtotal multiplied by your margin percentage.
+  </Step>
+  <Step title="Quote">
+    Subtotal plus margin — your estimated price.
+  </Step>
+</Steps>
+
+<Note>
+The estimate is only as good as the rates you enter and the cycle time estimate it builds on. Review your [cycle time](/summary/cycle-time) and setup times before you rely on a quote.
+</Note>

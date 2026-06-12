@@ -1,0 +1,37 @@
+---
+title: "Linking annotations"
+description: "Link an extracted annotation to a 3D feature so its tolerance feeds the tool recommender."
+---
+Linking connects an annotation to the feature it describes on the 3D model. A linked tolerance tells Neuramill which feature carries that requirement.
+
+## Why linking matters
+
+Linked tolerances feed the tool recommender and the speeds and feeds calculation. A tighter tolerance leads to tighter cutting parameters for that feature. The more annotations you link to the right features, the more accurate the recommendations in Step 4 Intelligent tool recommender.
+
+## Link an annotation to a feature
+
+<Steps>
+  <Step title="Find the annotation in the list">
+    Click the annotation's row in the annotation list, or click its numbered marker on the drawing. Confirm it is the callout you want to link.
+  </Step>
+  <Step title="Drag the row onto a feature">
+    Drag the annotation row onto the matching feature in the 3D model. Release it on the feature to create the link.
+  </Step>
+  <Step title="Confirm the link">
+    The annotation now shows as linked to that feature. One annotation can link to more than one feature when the same callout applies to several.
+
+    {/* TODO: screenshot needed — dragging an annotation row onto a feature in the 3D model */}
+  </Step>
+</Steps>
+
+<Note>
+Linking is idempotent. Re-linking the same annotation and feature does no harm, so you can repeat the drag safely.
+</Note>
+
+## General tolerances
+
+A drawing also has document-wide **general tolerances** — the default tolerances that apply when a feature has no specific callout. Neuramill shows these in the **General Tolerances** section above the annotation list, with the unit and the default tolerance for each decimal place (for example, `INCH` with `.XX ±.01` and `.XXX ±.001`). You do not link these to a single feature; Neuramill applies them to any feature without a linked annotation. Check that they match the title block on your drawing.
+
+<Tip>
+When your annotations are reviewed and linked, approve them to continue. See [Approving GD&T](/gdt-review/approving-gdt).
+</Tip>

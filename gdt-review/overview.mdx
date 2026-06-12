@@ -1,0 +1,45 @@
+---
+title: "GD&T review"
+description: "Review and link extracted GD&T annotations from an uploaded drawing before you start the studio steps."
+---
+When you start a session with a STEP file and a GD&T drawing, Neuramill extracts the drawing's annotations automatically and shows you the GD&T review screen. You see this screen before the studio steps so you can confirm the extracted dimensions, tolerances, and callouts and link them to the right features.
+
+<Info>
+You only see GD&T review if you uploaded a drawing. If your session has a STEP file alone, this section does not apply and you go straight into the studio steps. See [Upload CAD and GD&T](/starting-a-session/upload-cad-and-gdt) for how to start a session with a drawing.
+</Info>
+
+<Note>
+**Approval gate:** Step 2 Direction of cut stays locked until you approve the GD&T annotations. Review and link your annotations, then use [Approve GD&T](/gdt-review/approving-gdt) to unlock the studio steps.
+</Note>
+
+## Why it matters
+
+Linked tolerances feed the tool recommender and the speeds and feeds calculation. Tighter tolerances lead to tighter cutting parameters, so accurate annotations produce more accurate recommendations.
+
+## The three parts of the screen
+
+The GD&T review screen has three connected parts.
+
+| Part | What it shows |
+|------|---------------|
+| Document viewer | Renders the uploaded `.pdf` or `.tiff` drawing. Zoom, pan, and page navigation. |
+| Annotation markers | Numbered bubbles overlaid on the drawing, one per extracted annotation. |
+| Annotation list | A table of every extracted annotation. Click a row to highlight its bubble, and click a bubble to highlight its row. |
+
+Each annotation has a type, value, units, and tolerance.
+
+{/* TODO: screenshot needed — GD&T review screen showing document viewer, numbered markers, and annotation list */}
+
+## Navigate this section
+
+<CardGroup cols={3}>
+  <Card title="Reviewing annotations" icon="magnifying-glass" href="/gdt-review/reviewing-annotations">
+    Read the annotation list, and edit, merge, or delete annotations.
+  </Card>
+  <Card title="Linking annotations" icon="link" href="/gdt-review/linking-annotations">
+    Link an annotation to a 3D feature so it feeds the tool recommender.
+  </Card>
+  <Card title="Approving GD&T" icon="circle-check" href="/gdt-review/approving-gdt">
+    Approve the annotations to unlock Step 2 Direction of cut.
+  </Card>
+</CardGroup>

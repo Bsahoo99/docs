@@ -1,0 +1,33 @@
+---
+title: "Generating an export key"
+description: "Create and copy a one-time export key from a completed job in the Neuramill web app."
+---
+An export key is a one-time encrypted token that lets the Fusion add-in fetch your finished plan. You generate it from a completed job in the web app and paste it into Fusion.
+
+## Generate the key
+
+<Steps>
+  <Step title="Go to the Summary step">
+    In the Neuramill web app, open the job you want to export and go to its **Summary** step (Step 5). The plan must be complete.
+  </Step>
+  <Step title="Click Generate key">
+    At the top of the Summary page, click **Generate key**. The export key is created and shown — copy the code.
+
+    {/* TODO: screenshot needed — Summary page with the Generate key control and the copied key */}
+  </Step>
+  <Step title="Switch to Fusion 360">
+    Leave the web app and open Fusion 360. Continue with [Importing CAM data](/fusion-addin/importing-cam-data), where you paste the key.
+  </Step>
+</Steps>
+
+<Warning>
+Each export key is one-time use. After it is used to import, generate a fresh key for the next import.
+</Warning>
+
+<Note>
+The key carries an environment suffix that routes it to the correct Neuramill server automatically. You do not need to configure anything.
+</Note>
+
+## Next step
+
+In Fusion 360, [import the CAM data](/fusion-addin/importing-cam-data) using your key.

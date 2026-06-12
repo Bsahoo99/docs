@@ -1,0 +1,49 @@
+---
+title: "Importing CAM data"
+description: "Open the Neuramill Import palette in Fusion 360, paste your export key, and build the plan in your document."
+---
+With the add-in installed and an export key in hand, you import your plan from the **Neuramill Import** palette. The add-in fetches the Fusion-native CAM payload and builds it in the open document.
+
+## Import your plan
+
+<Steps>
+  <Step title="Open the Neuramill Import palette">
+    Switch to the **Manufacturing** workspace and click **Neuramill Import** in the toolbar (also available in the **ADD-INS** dropdown). The palette opens as a dockable panel.
+
+    {/* TODO: screenshot needed — Neuramill Import palette with the key field, checkbox, and Import CAM Data button */}
+  </Step>
+  <Step title="Paste your export key">
+    Paste your key into the **Export key** field ("Paste your export key here"). If you have imported before, the field may be pre-filled from a previous key stored in your Fusion preferences — replace it with your new key.
+  </Step>
+  <Step title="Choose whether to generate toolpaths">
+    Leave **Generate toolpaths after import** checked (the default) to have Fusion generate toolpaths once the operations are built. Uncheck it to build setups, tools, and operations only.
+  </Step>
+  <Step title="Click Import CAM Data">
+    Click **Import CAM Data**. The add-in fetches the payload and builds the CAM data in your document.
+  </Step>
+  <Step title="Read the status message">
+    Status messages appear below the button. A success message confirms the import; an error message tells you what went wrong. See troubleshooting below if you hit an error.
+  </Step>
+</Steps>
+
+<Check>
+A success status message appears, and the new setups and operations show in Fusion's CAM browser.
+</Check>
+
+## What gets built
+
+The add-in creates setups, tools, and operations — and toolpaths if the checkbox was on. See [What gets imported](/fusion-addin/what-gets-imported) for the full breakdown, and [After import](/fusion-addin/after-import) for next steps.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The Neuramill Import button is not visible">
+    The button appears in the **Manufacturing** workspace. Switch to that workspace from the workspace selector. If it is still missing, confirm the add-in is running and set to **Run on Startup** — see [Installing the add-in](/fusion-addin/installing).
+  </Accordion>
+  <Accordion title="The export key is rejected">
+    Export keys are one-time use. If the key was already used, generate a fresh one — see [Generating an export key](/fusion-addin/generating-an-export-key). Also confirm you pasted the full key with no extra spaces.
+  </Accordion>
+  <Accordion title="The import fails with an error message">
+    Read the status message below the **Import CAM Data** button for the cause. Generate a fresh export key and try again. If the error persists, contact the Neuramill team at founders@neuramill.co.
+  </Accordion>
+</AccordionGroup>

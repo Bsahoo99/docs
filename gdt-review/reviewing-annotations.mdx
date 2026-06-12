@@ -1,0 +1,48 @@
+---
+title: "Reviewing annotations"
+description: "Navigate the document viewer, read the annotation list, and edit, merge, or delete extracted annotations."
+---
+Before you link or approve annotations, check that Neuramill extracted them correctly. Compare each annotation against the drawing and fix anything that is wrong.
+
+## Navigate the document viewer
+
+The document viewer renders your uploaded `.pdf` or `.tiff` drawing. Use it to find the source of each annotation.
+
+- Zoom in and out to read small callouts.
+- Pan to move around the drawing.
+- Use page navigation to move between pages of a multi-page drawing.
+
+Numbered **annotation markers** sit on top of the drawing. Each marker matches one row in the annotation list. Click a marker to highlight its row, and click a row to highlight its marker.
+
+{/* TODO: screenshot needed — document viewer with zoom controls and numbered markers */}
+
+## Read the annotation list
+
+The **annotation list** is a table of every extracted annotation. The count next to the heading shows how many were found. Each row describes one callout from the drawing and carries the numbered marker that points to it.
+
+| Column | What it means |
+|--------|---------------|
+| Type | The kind of callout — for example Dimension, Diameter, Counterbore, Radius, or Thread. |
+| Value | The nominal value Neuramill read from the drawing. |
+| Tol | The allowed variation (tolerance) for the value. |
+| Units | The units for the value, for example inches or millimeters. |
+| Callouts | Extra callout text attached to the dimension, such as `THRU`. |
+| Linked | Whether the annotation is linked to a 3D feature. See [Linking annotations](/gdt-review/linking-annotations). |
+
+Use the filter chips above the table — **All**, **Counterbore**, **Diameter**, **Dimension**, **Radius**, **Thread** — to show only one type at a time. Each chip shows its count.
+
+## Edit an annotation
+
+If a value is wrong, edit it inline in the annotation list. Click the value in its row — a text box appears — type the correct value, and it saves when you click away.
+
+## Merge duplicate annotations
+
+If Neuramill extracted the same callout twice, **drag one row onto another** to merge the duplicates into a single annotation. Merging keeps the list clean and avoids linking the same tolerance from two rows.
+
+## Delete an annotation
+
+Delete an annotation that does not belong to the part or was extracted in error. Deletes are soft: Neuramill keeps an audit history, so a deleted annotation can be recovered.
+
+<Tip>
+Finish reviewing and correcting annotations before you link them to features. See [Linking annotations](/gdt-review/linking-annotations).
+</Tip>

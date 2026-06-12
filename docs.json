@@ -30,6 +30,7 @@
         "pages": [
           "index",
           "getting-started/what-is-neuramill",
+          "getting-started/your-first-job",
           "getting-started/what-you-need",
           "getting-started/subscriptions",
           "getting-started/user-roles"
@@ -50,8 +51,11 @@
           "dashboard/jobs-tab",
           "dashboard/machines-tab",
           "dashboard/tools-tab",
+          "dashboard/policies",
+          "dashboard/machining-config",
           "dashboard/users-tab",
-          "dashboard/invitations-tab"
+          "dashboard/invitations-tab",
+          "dashboard/usage"
         ]
       },
       {
@@ -71,6 +75,15 @@
         ]
       },
       {
+        "group": "GD&T review",
+        "pages": [
+          "gdt-review/overview",
+          "gdt-review/reviewing-annotations",
+          "gdt-review/linking-annotations",
+          "gdt-review/approving-gdt"
+        ]
+      },
+      {
         "group": "3D viewer toolbar",
         "pages": [
           "viewer-toolbar/toolbar-overview",
@@ -81,7 +94,20 @@
         ]
       },
       {
-        "group": "Step 1: Direction of cut",
+        "group": "Step 1: Machining setup",
+        "pages": [
+          "machining-setup/overview",
+          "machining-setup/approving-features",
+          "machining-setup/material",
+          "machining-setup/machine",
+          "machining-setup/rigidity",
+          "machining-setup/stock-size",
+          "machining-setup/stock-validation",
+          "machining-setup/quick-setup"
+        ]
+      },
+      {
+        "group": "Step 2: Direction of cut",
         "pages": [
           "direction-of-cut/overview",
           "direction-of-cut/cad-view",
@@ -92,18 +118,6 @@
           "direction-of-cut/flagging-features",
           "direction-of-cut/advanced-classification",
           "direction-of-cut/approving"
-        ]
-      },
-      {
-        "group": "Step 2: Machining setup",
-        "pages": [
-          "machining-setup/overview",
-          "machining-setup/approving-features",
-          "machining-setup/material",
-          "machining-setup/machine",
-          "machining-setup/rigidity",
-          "machining-setup/stock-size",
-          "machining-setup/stock-validation"
         ]
       },
       {
@@ -119,7 +133,7 @@
         ]
       },
       {
-        "group": "Step 4: Tool recommender",
+        "group": "Step 4: Intelligent tool recommender",
         "pages": [
           "tool-recommender/overview",
           "tool-recommender/tool-source-filters",
@@ -132,7 +146,27 @@
         "group": "Step 5: Summary",
         "pages": [
           "summary/summary-view",
+          "summary/cycle-time",
+          "summary/quote-calculator",
           "summary/finalize"
+        ]
+      },
+      {
+        "group": "Export to Fusion 360",
+        "pages": [
+          "fusion-addin/overview",
+          "fusion-addin/installing",
+          "fusion-addin/generating-an-export-key",
+          "fusion-addin/importing-cam-data",
+          "fusion-addin/what-gets-imported",
+          "fusion-addin/after-import"
+        ]
+      },
+      {
+        "group": "Assistant and review",
+        "pages": [
+          "neurachat/using-neurachat",
+          "review-mode/reviewing-a-completed-job"
         ]
       },
       {

@@ -1,0 +1,36 @@
+---
+title: "Read and adjust cycle time"
+description: "The Summary step shows an estimated cycle time that combines machining time and setup time, with setup time editable per strategy."
+---
+On the [Summary step](/summary/summary-view), Neuramill shows an estimated **cycle time** for the plan. Use it to gauge how long the job will take on the machine.
+
+{/* TODO: screenshot needed — Summary step with the estimated cycle time */}
+
+## What the estimate includes
+
+Cycle time combines two parts:
+
+| Part | What it covers |
+|------|----------------|
+| **Machining time** | The cutting time for each pass and operation in the plan. |
+| **Setup time** | Probing, setting the datum, and loading and unloading the part for each strategy. |
+
+## Adjust setup time
+
+Setup time is editable per strategy, so you can match your shop's real numbers. On the Summary step, open a strategy to find its **Setup times** fields and edit them (values are in seconds):
+
+| Field | What it covers |
+|-------|----------------|
+| Load / Unload | Loading the part into the fixture and removing it afterward. |
+| Datum Setup | Setting the work coordinate origin for the setup. |
+| Probe Cycle | Probing the part to confirm its position. |
+
+The pass breakdown below shows machining and non-cutting time per pass; machining time is not edited here.
+
+<Tip>
+Machining time comes from the plan's operations and is not edited here. To change it, adjust the upstream steps that drive cutting parameters, such as the tool recommendations.
+</Tip>
+
+<Card title="Estimate a price with Quick Quote" icon="calculator" href="/summary/quote-calculator">
+  Turn the cycle time and your shop rates into a rough price estimate.
+</Card>

@@ -1,0 +1,79 @@
+---
+title: "Installing the add-in"
+description: "Install the Neuramill add-in from the Fusion App Store on macOS or Windows, then enable it in Fusion 360."
+---
+The Neuramill add-in is published on the **Autodesk App Store**. You install it from inside Fusion 360, then enable it so the **Neuramill Import** button appears in your Manufacturing workspace.
+
+## Open the Fusion App Store
+
+<Steps>
+  <Step title="Open the Add-Ins menu">
+    In Fusion 360, go to the **Utilities** tab and click the **ADD-INS** dropdown.
+
+    {/* TODO: screenshot needed — Utilities tab with the ADD-INS dropdown open, showing Fusion App Store */}
+  </Step>
+  <Step title="Open the Fusion App Store">
+    Choose **Fusion App Store**. The store opens in your browser.
+  </Step>
+  <Step title="Find the Neuramill add-in">
+    Search the store for the Neuramill add-in and open its listing. {/* TODO: add the Autodesk App Store listing URL */}
+  </Step>
+  <Step title="Download the installer for your operating system">
+    Download the **macOS** or **Windows** installer to match your computer, then run it. Close Fusion 360 first so the installer can finish.
+  </Step>
+</Steps>
+
+<Note>
+The store has separate installers for **macOS** and **Windows**. Download the one that matches your computer.
+</Note>
+
+## Enable the add-in in Fusion
+
+<Steps>
+  <Step title="Open Scripts and Add-Ins">
+    Reopen Fusion 360, go to the **Utilities** tab, click **ADD-INS**, and choose **Scripts and Add-Ins** (or press `Shift` + `S`).
+  </Step>
+  <Step title="Run it and turn on Run on Startup">
+    On the **Add-Ins** tab, select the Neuramill add-in, click **Run**, and turn on **Run on Startup** so it loads automatically every time you open Fusion.
+
+    {/* TODO: screenshot needed — Scripts and Add-Ins dialog with Neuramill add-in selected and Run on Startup checked */}
+  </Step>
+</Steps>
+
+## If the add-in is blocked or will not install
+
+Your operating system may block the installer because it comes from outside the system app store. Allow it, then restart Fusion 360.
+
+<AccordionGroup>
+  <Accordion title="macOS — allow it in Privacy & Security">
+    1. Open **System Settings** and go to **Privacy & Security**.
+    2. Scroll to the message that the Neuramill installer was blocked, and click **Open Anyway** (also shown as **Allow Anyway**).
+    3. Confirm with your password or Touch ID if prompted.
+    4. Restart Fusion 360 and try again.
+  </Accordion>
+  <Accordion title="Windows — allow it through SmartScreen">
+    1. If Windows shows an "unrecognized app" warning, click **More info**, then **Run anyway**.
+    2. If the downloaded file is blocked, right-click it, choose **Properties**, tick **Unblock**, and click **OK**.
+    3. Restart Fusion 360 and try again.
+
+    {/* TODO: confirm the exact Windows steps for your installer */}
+  </Accordion>
+</AccordionGroup>
+
+## Confirm it loaded
+
+Switch to the **Manufacturing** workspace. You should see the **Neuramill Import** button in the toolbar. It also appears in the **ADD-INS** dropdown.
+
+<Check>
+The **Neuramill Import** button is visible in the Manufacturing workspace toolbar.
+</Check>
+
+If you still do not see the button, see the troubleshooting steps in [Importing CAM data](/fusion-addin/importing-cam-data).
+
+<Note>
+Need help installing the add-in? Contact the Neuramill team at founders@neuramill.co.
+</Note>
+
+## Next step
+
+[Generate an export key](/fusion-addin/generating-an-export-key) from a completed job in the web app.

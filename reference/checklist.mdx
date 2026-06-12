@@ -4,7 +4,7 @@ description: "Run through this checklist before calling a session done."
 ---
 Use this checklist every time before you finalize a session.
 
-## Before Upload
+## Before upload
 
 <Check>STEP file is `.STEP` or `.STP` format (not `.STL`, `.OBJ`, or other)</Check>
 <Check>STEP file contains only the workpiece — no reference planes, assembly components, or construction geometry</Check>
@@ -12,16 +12,13 @@ Use this checklist every time before you finalize a session.
 <Check>You know the exact material alloy (not just the generic family)</Check>
 <Check>GD&T drawing is located and in PDF or TIFF format (if you have one)</Check>
 
-## Step 1 — Direction of Cut
+## GD&T review (only if you uploaded a drawing)
 
-<Check>All features in the list have been reviewed</Check>
-<Check>Each feature is assigned to the correct face direction</Check>
-<Check>Incorrect features or features with wrong dimensions have been flagged</Check>
-<Check>Features that should not be machined have been flagged as Extra Feature</Check>
-<Check>Operations for each feature have been checked</Check>
-<Check>Direction of Cut Approved — green badge is showing</Check>
+<Check>Extracted annotations reviewed for accuracy</Check>
+<Check>Key tolerance callouts linked to the correct 3D features</Check>
+<Check>GD&T Approved — Step 2 Direction of cut is now unlocked</Check>
 
-## Step 2 — Machining Setup
+## Step 1 — Machining Setup
 
 <Check>Features approved at the top of the panel</Check>
 <Check>Material selected — specific alloy, not just the generic family</Check>
@@ -30,6 +27,15 @@ Use this checklist every time before you finalize a session.
 <Check>Stock dimensions entered (X, Y, Z)</Check>
 <Check>Green "Stock Validated" banner is showing</Check>
 <Check>Machining Setup Approved — green badge is showing</Check>
+
+## Step 2 — Direction of Cut
+
+<Check>All features in the list have been reviewed</Check>
+<Check>Each feature is assigned to the correct face direction</Check>
+<Check>Incorrect features or features with wrong dimensions have been flagged</Check>
+<Check>Features that should not be machined have been flagged as Extra Feature</Check>
+<Check>Operations for each feature have been checked</Check>
+<Check>Direction of Cut Approved — green badge is showing</Check>
 
 ## Step 3 — Clamping Strategy
 
@@ -49,5 +55,12 @@ Use this checklist every time before you finalize a session.
 ## Step 5 — Summary
 
 <Check>Summary reviewed — all operations, tools, and parameters look correct</Check>
+<Check>Cycle time reviewed and setup times adjusted to your shop</Check>
 <Check>"All Steps Complete" badge is visible in the footer</Check>
 <Check>Session is saved on the Neuramill server</Check>
+
+## Export to Fusion 360 (optional)
+
+<Check>Export key generated from the completed job</Check>
+<Check>CAM data imported into Fusion with the [Neuramill Import add-in](/fusion-addin/overview)</Check>
+<Check>Setups, tools, and operations look correct in the Fusion CAM tree</Check>

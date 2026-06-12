@@ -1,0 +1,48 @@
+---
+title: "Export to Fusion 360"
+description: "How the Neuramill add-in brings a finished plan into Fusion 360 as native CAM setups, tools, operations, and toolpaths."
+sidebarTitle: "Overview"
+---
+The Neuramill add-in for Fusion 360 turns a finished Neuramill plan into native Fusion CAM data. You get setups, tools, operations, and (optionally) generated toolpaths built directly in your Fusion document — ready to simulate, post-process, and run.
+
+## The round trip
+
+Your plan starts in the Neuramill web app and ends in Fusion 360. Three things connect them:
+
+<Steps>
+  <Step title="Finish a plan in the web app">
+    Work through a session to a completed plan, ending at [Step 5 — Summary](/summary/summary-view). The export key is generated from the completed job.
+  </Step>
+  <Step title="Generate an export key">
+    From the completed job, generate a one-time **export key** and copy it to your clipboard. See [Generating an export key](/fusion-addin/generating-an-export-key).
+  </Step>
+  <Step title="Import in Fusion 360">
+    Open the **Neuramill Import** palette in Fusion, paste the key, and click **Import CAM Data**. The add-in builds the CAM data in your document. See [Importing CAM data](/fusion-addin/importing-cam-data).
+  </Step>
+</Steps>
+
+{/* TODO: screenshot needed — web app job to Fusion import round-trip diagram */}
+
+## In this section
+
+<CardGroup cols={2}>
+  <Card title="Installing the add-in" icon="download" href="/fusion-addin/installing">
+    Install and enable the Neuramill add-in in Fusion 360.
+  </Card>
+  <Card title="Generating an export key" icon="key" href="/fusion-addin/generating-an-export-key">
+    Create and copy a one-time export key from a completed job.
+  </Card>
+  <Card title="Importing CAM data" icon="file-import" href="/fusion-addin/importing-cam-data">
+    Open the palette, paste your key, and import the plan.
+  </Card>
+  <Card title="What gets imported" icon="list-check" href="/fusion-addin/what-gets-imported">
+    The setups, tools, and operations the add-in creates.
+  </Card>
+  <Card title="After import" icon="play" href="/fusion-addin/after-import">
+    Generate toolpaths, inspect machined faces, and export NC code.
+  </Card>
+</CardGroup>
+
+<Note>
+The export key carries an environment suffix that routes it to the right Neuramill server automatically. You do not need to configure this.
+</Note>

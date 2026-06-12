@@ -1,0 +1,30 @@
+---
+title: "Approving GD&T"
+description: "Approve the extracted annotations to unlock Step 2 Direction of cut."
+---
+Approval is the sign-off that ends GD&T review. When a drawing was uploaded, Step 2 Direction of cut stays locked until you approve the annotations.
+
+## What to check before approving
+
+Confirm your review is complete before you approve.
+
+- Every annotation matches the drawing in type, value, units, and tolerance. See [Reviewing annotations](/gdt-review/reviewing-annotations).
+- Duplicate annotations are merged, and any incorrect ones are deleted.
+- Each tolerance that matters is linked to the right feature. See [Linking annotations](/gdt-review/linking-annotations).
+- The document-wide general tolerances match the drawing's title block.
+
+## Approve GD&T
+
+Use the **Approve GD&T** action to sign off the annotations. Approval unlocks Step 2 Direction of cut, and you proceed into the studio steps.
+
+{/* TODO: screenshot needed — Approve GD&T action on the GD&T review screen */}
+
+<Warning>
+Linked tolerances feed the tool recommender and speeds and feeds. Approve only when the annotations are correct, because errors carry through to the recommendations in Step 4 Intelligent tool recommender.
+</Warning>
+
+## Next step
+
+<Card title="Review direction of cut" icon="arrow-right" href="/direction-of-cut/overview">
+  Step 2. Review every detected feature and confirm its machining direction.
+</Card>

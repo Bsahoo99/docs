@@ -1,0 +1,35 @@
+---
+title: "Manage machining configuration"
+description: "The Machining configuration area is the hub for the libraries that feed planning."
+---
+The **Machining configuration** area is the hub for the libraries that feed planning: materials, machines, workholdings, and the tool catalog. From here you can view and manage these libraries.
+
+<Info>
+Any team member can add to and edit these libraries. The one exception is **adding machines**, which is restricted to admins.
+</Info>
+
+{/* TODO: screenshot needed — Machining configuration area showing the library sections */}
+
+## Libraries
+
+| Library | What it holds |
+|---------|---------------|
+| Materials | The stock materials Neuramill plans against, with their machining characteristics. |
+| Machines | The CNC machines configured for your company. |
+| Workholdings | The clamping strategies available when you plan a setup. |
+| Tool catalog | Your company's cutting tool library. |
+
+## Open a library
+
+<CardGroup cols={2}>
+  <Card title="Manage machines" icon="gear" href="/dashboard/machines-tab">
+    View the CNC machines configured for your company.
+  </Card>
+  <Card title="Manage tools" icon="wrench" href="/dashboard/tools-tab">
+    View your company's cutting tool library.
+  </Card>
+</CardGroup>
+
+<Note>
+Materials and machines feed into machining policies, which map feature and material combinations to operation parameters. See [Policies](/dashboard/policies).
+</Note>
