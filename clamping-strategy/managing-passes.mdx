@@ -1,0 +1,65 @@
+---
+title: "Add, edit, and delete passes"
+description: "Add a new pass, edit a pass's machining profile, delete a pass, and move features between passes within a clamping strategy."
+sidebarTitle: "Manage passes"
+---
+A **pass** is one machining operation — facing, roughing, drilling, and so on — run on a set of features in the setup. Expand a strategy card to see its passes. Changes you make here are local until you click **Save Changes** at the top of the pass list.
+
+## Add a pass
+
+<Steps>
+  <Step title="Click Add Pass">
+    At the bottom of the pass list, click **Add Pass**.
+  </Step>
+  <Step title="Choose the operation type and strategy">
+    Pick an **operation type** (Facing, Roughing, Drilling, Boring, and so on), then pick a **machining strategy** for it. The strategy options depend on the operation you chose.
+  </Step>
+  <Step title="Add features">
+    The new pass starts empty. [Add features to it](/clamping-strategy/managing-features) the same way you add features to any pass.
+  </Step>
+</Steps>
+
+![Add Pass dialog with operation type and machining strategy dropdowns](/images/onboarding/screenshots/s74-clamping-add-pass-dialog.webp)
+
+## Edit a pass
+
+Expand a pass to see its **Machining Profile**. From there you can adjust how the operation cuts:
+
+- **Machining strategy** — the cutting strategy for the operation
+- **Tolerance** — click the value to edit it inline
+- **Stock to leave** — the radial and axial amounts left for a later pass
+- **Coolant** — the coolant mode
+
+A collapsible **Strategy parameters** section holds the advanced, operation-specific settings. Most jobs do not need to touch these — Neuramill fills them from your machining policies.
+
+![Expanded pass showing the machining profile and the delete control](/images/onboarding/screenshots/s75-clamping-pass-machining-profile.webp)
+
+<Note>
+Profile edits are local until you click **Save Changes** at the top of the pass list.
+</Note>
+
+## Delete a pass
+
+Click the **trash icon** on the pass header to remove the pass and everything in it.
+
+- If you remove the **last feature** from a pass, Neuramill asks whether to **Remove pass** or **Keep empty pass** — an empty draft you can fill later.
+- When you click **Save Changes**, a confirmation lists how many passes and features you removed before the deletion is saved.
+
+## Move features between passes
+
+You do not have to delete and re-add a feature to move it:
+
+- **Drag** a feature card from one pass and drop it onto another.
+- To move several at once, **Ctrl/Cmd+click** to select multiple features, then use the floating **Move to…** bar to send them to another pass.
+
+If a move empties the source pass, Neuramill asks whether to remove that pass or keep it empty.
+
+## Other things you can do
+
+- **Filter by setup** — when a pass has features from more than one direction, click a setup pill (Top, Bottom, and so on) to show only that direction.
+- **Highlight in 3D** — click the pass's operation badge to highlight all of its features in the viewer.
+- **Expand or collapse all** — open or close every pass at once from the top of the pass list.
+
+<Card title="Add or remove features and reorder passes" icon="arrow-right" href="/clamping-strategy/managing-features">
+  Add features to a pass, remove them, and change the order the passes run in.
+</Card>

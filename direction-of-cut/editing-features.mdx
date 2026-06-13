@@ -1,0 +1,65 @@
+---
+title: "Edit or add a feature"
+description: "Use the feature editor in Direction of cut to correct a feature's faces, type, direction, dimensions, and operations — or build a feature the classifier missed."
+sidebarTitle: "Edit features"
+---
+Flagging marks a feature as wrong without changing it. When you want to actually **correct** a feature — its faces, type, machining direction, dimensions, or operations — or **build a feature** the classifier missed, use the feature editor.
+
+## Open the feature editor
+
+You can open it three ways:
+
+- **Edit an existing feature** — on a [feature card](/direction-of-cut/feature-cards), click the **⋯** menu in the top-right and choose **Edit**. The editor opens with the feature's current faces and settings loaded. Available in both Hybrid and Grid views.
+- **Add a new feature** — click **New Feature** in the Hybrid or Grid view header. The editor opens empty.
+- **Assign unassigned faces** — if some faces of the part do not belong to any feature, a banner appears in Direction of cut. Click **Assign Faces** to open the editor with those faces already selected.
+
+<Warning>
+Saving an edit replaces the feature and resets the downstream steps — Clamping strategy and Tool recommender — so you will need to approve them again. Edit here before you move on, not after.
+</Warning>
+
+## The three steps
+
+The editor walks through three steps, shown in a step indicator at the top.
+
+<Steps>
+  <Step title="Select and group">
+    Click faces on the 3D model to select them. Click **Create feature from selection** to turn the selected faces into a feature, or **Add to Feature N** to add them to one you already started. Remove a face with the **✕** next to it.
+  </Step>
+  <Step title="Configure">
+    Set each feature's properties:
+    - **Type** — the feature type (hole, slot, pocket, boss, chamfer, and so on)
+    - **Setup direction** — Top, Bottom, Front, Back, Left, or Right (required)
+    - **Dimensions** — some compute automatically from the selected faces; others you type in
+    - **Operations** — toggle the required and optional operations (roughing, finishing, drilling, threading, and so on)
+    - **Axis** — for hole-like features, the approach axis (required for those types)
+  </Step>
+  <Step title="Review">
+    Preview each feature as a card and check the **warnings** — a missing setup direction, a missing axis, features that will be removed because their faces moved, or faces still left unassigned. When it looks right, click **Save changes** (when editing) or **Create feature** (when adding).
+  </Step>
+</Steps>
+
+## What you can change
+
+| Property | How you change it |
+|----------|-------------------|
+| Faces | Add or remove faces in the Select and group step |
+| Type | Type dropdown in Configure |
+| Setup direction | Six-direction buttons in Configure |
+| Dimensions | Number inputs (some auto-computed) in Configure |
+| Operations | Required and optional toggles in Configure |
+| Axis | Axis dropdown in Configure (hole-like features) |
+
+The feature name is set automatically from its type and cannot be edited.
+
+## Edit or flag?
+
+| Use | When |
+|-----|------|
+| [Flag](/direction-of-cut/flagging-features) | The classifier is mostly right but one thing is off — a wrong dimension, or a feature that should not be machined. Quick and non-destructive. |
+| **Edit** | You need to rebuild the feature — change its faces, type, direction, or operations — or the classifier missed it entirely. |
+
+<Note>
+You cannot flag a feature you created yourself — edit it instead.
+</Note>
+
+![Feature editor showing the Select and group, Configure, and Review steps](/images/onboarding/screenshots/s73-direction-feature-editor.webp)

@@ -1,71 +1,61 @@
 ---
 title: "Add a clamping strategy"
-description: "How to fill out the New Clamping Strategy form — datum plane, fixture type, blocked faces, and approving."
+description: "Fill out the New Strategy form — set the datum and blocked faces, choose a workholding, set cycle time parameters, and add the strategy."
 ---
-Each strategy represents one physical clamping setup — one time the part is in the fixture.
+Each strategy represents one physical clamping setup — one time the part is in the workholding.
 
-## Step 1: Click + Add Clamping Strategy
+## Open the New Strategy form
 
-On the Clamping Strategy screen, click the **+ Add Clamping Strategy** button. It appears as a dashed-border card in the strategy area.
+On the Clamping strategy screen, click **+ Add Clamping Strategy**. A **New Strategy** form opens as a dashed-border card.
 
-A form opens: **New Clamping Strategy**
+![New strategy form with the face grid, workholding, and cycle time parameters](/images/onboarding/screenshots/s37-clamping-new-strategy-form.webp)
 
-![New clamping strategy form with all controls visible](/images/onboarding/screenshots/s37-clamping-new-strategy-form.webp)
+## Set the datum and blocked faces
 
-## Step 2: Choose the datum plane
+The form opens with an interactive **6-face grid**. This is where you tell Neuramill how the part sits in the workholding and which faces the tool cannot reach.
 
-The **Datum Plane** is the face of the part that sits down on the fixture. It is your reference face for this setup — the face that touches the vise jaw, the fixture plate, or the parallels.
+- **Click a face** to set it as the **datum** — the face sitting down on the workholding. It turns red.
+- **Right-click** (or **Shift+click**) a non-datum face to mark it **blocked** — a face the workholding jaw or clamp covers. It turns orange. Do it again to unblock.
+- Any face that is neither datum nor blocked is **accessible** — the tool can reach it in this setup.
 
-1. Click the **Datum Plane** dropdown.
-2. Choose the face: Top, Bottom, Front, Back, Left, or Right.
+| Color | Meaning |
+|-------|---------|
+| **Red** | Datum — the part sits on this face |
+| **Orange** | Blocked — the workholding covers this face; the tool cannot reach it |
+| **Green** | Accessible — the tool can reach this face in this setup |
 
-**Example:** If you are laying the part down with the bottom face on the vise parallels, choose **Bottom**.
-
-## Step 3: Choose the fixture type
-
-1. Click the **Fixture Type** dropdown.
-2. Choose the workholding device you are using.
-
-Examples: Talon-grip / step-jaw vise, standard soft-jaw vise, dovetail fixture, vacuum chuck, strap clamps.
-
-## Step 4: Block the covered faces
-
-This is the most important part of the form. You are telling Neuramill which faces of the part **the tool cannot reach** because the fixture is in the way.
-
-There are **six face buttons**: Top, Bottom, Front, Back, Left, Right.
-
-| Button Color | What It Means |
-|-------------|---------------|
-| **Red** | Datum face — the part is sitting on this face. The tool cannot reach it from outside. (Set automatically when you choose the Datum Plane.) |
-| **Orange** | Blocked — the fixture jaw or clamp is touching this face. The tool cannot reach it. |
-| **Green** | Accessible — the tool can reach this face in this setup. |
-
-**To block a face:** Click its button. It turns orange.
-**To un-block a face:** Click its orange button again. It turns green.
-
-As you click, a **summary line** at the bottom of the section updates in real time:
-*"Datum: Bottom | Blocked: Left, Right | Accessible: Top, Front, Back"*
-
-![Clamping face button states for datum blocked and accessible](/images/onboarding/screenshots/s38-clamping-face-buttons-color-states.webp)
+![Face grid showing datum (red), blocked (orange), and accessible (green) faces](/images/onboarding/screenshots/s38-clamping-face-buttons-color-states.webp)
 
 <Tip>
-**Double-click any face button** to highlight that face on the 3D viewer. Use this to visually confirm which faces your fixture is actually touching before you click.
+Setting the datum and blocked faces correctly is the most important part of the strategy — any face you leave accessible is one the tool will try to machine in this setup.
 </Tip>
 
-## Step 5: Add notes (optional)
+## Choose a workholding
 
-Type any reminders in the **Notes** field. For example:
-- *"6-inch Kurt vise, 0.5-inch step jaws"*
-- *"Part sits on parallels, top face accessible"*
+Open the **Workholding** dropdown and select the device you are using from your company's [workholding library](/dashboard/machining-config). If the dropdown is empty, no workholdings have been set up yet.
 
-These notes appear on the strategy card and in the Summary.
+Selecting a workholding fills in its default **Load / Unload** and **Setup Datum** times automatically — you can adjust them below.
 
-## Step 6: Approve the Strategy
+## Set cycle time parameters
 
-1. Read the summary line one more time and confirm the blocked faces are correct.
-2. Click the **Approve Strategy** button.
-3. The form closes and a **strategy card** appears on the screen.
+The **Cycle Time Parameters** block sets the non-cutting time for this setup, in seconds. These feed the [cycle time estimate](/summary/cycle-time) on the Summary step.
 
-<Card title="Operations Inside a Strategy" icon="arrow-right" href="/clamping-strategy/operations">
+| Parameter | What it covers |
+|-----------|----------------|
+| **Probe Cycle Time** | Probing the part to confirm its position. Always editable. |
+| **Load / Unload Time** | Loading the part into the workholding and removing it. Enabled once you select a workholding. |
+| **Setup Datum Time** | Setting the work origin for this setup. Enabled once you select a workholding. |
+
+Each value must be 0 or greater. You cannot add the strategy while a field is blank or negative.
+
+## Add notes (optional)
+
+Type any reminders in the **Notes** field — for example *"6-inch Kurt vise, 0.5-inch step jaws."* Notes appear on the strategy card and in the Summary.
+
+## Add the strategy
+
+Click **Add Strategy**. The form closes and a **strategy card** appears.
+
+<Card title="Operations inside a strategy" icon="arrow-right" href="/clamping-strategy/operations">
   What the strategy card shows and how to read the operation list inside it.
 </Card>

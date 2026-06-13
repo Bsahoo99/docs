@@ -61,9 +61,7 @@
       {
         "group": "Profile",
         "pages": [
-          "profile/my-profile",
-          "profile/company-usage",
-          "profile/machining-policy-preferences"
+          "profile/my-profile"
         ]
       },
       {
@@ -110,12 +108,12 @@
         "group": "Step 2: Direction of cut",
         "pages": [
           "direction-of-cut/overview",
-          "direction-of-cut/cad-view",
-          "direction-of-cut/setup-view",
+          "direction-of-cut/hybrid-view",
           "direction-of-cut/grid-view",
           "direction-of-cut/feature-cards",
           "direction-of-cut/changing-setup-direction",
           "direction-of-cut/flagging-features",
+          "direction-of-cut/editing-features",
           "direction-of-cut/advanced-classification",
           "direction-of-cut/approving"
         ]
@@ -127,6 +125,7 @@
           "clamping-strategy/feature-distribution",
           "clamping-strategy/adding-a-strategy",
           "clamping-strategy/operations",
+          "clamping-strategy/managing-passes",
           "clamping-strategy/managing-features",
           "clamping-strategy/multiple-strategies",
           "clamping-strategy/completing-setup"

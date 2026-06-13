@@ -7,7 +7,7 @@ Every machinist knows this from years in the shop: when you machine a part, you 
 In Neuramill, you define a **clamping strategy** for each setup. A strategy tells Neuramill:
 
 1. Which face is sitting down on the fixture (**the datum face**)
-2. What kind of fixture you are using
+2. Which **workholding** you are using
 3. Which other faces the fixture is touching (**blocked faces**)
 
 Neuramill uses this to check that every detected feature is accessible in at least one of your strategies. Any feature that is not covered by any strategy shows up as **Remaining** — it would not get machined if you left it that way.

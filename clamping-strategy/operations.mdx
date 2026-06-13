@@ -26,9 +26,14 @@ The collapsed strategy card header shows:
 | Strategy number | Auto-named: Strategy 1, Strategy 2, etc. |
 | Pass count | How many operations are in this setup |
 | Feature count | How many features are covered |
-| Fixture type | The workholding device you selected |
+| Workholding | The workholding device you selected |
 | Face badges | Red = Datum, Orange = Blocked, Green = Accessible |
 
-<Card title="Manage features in operations" icon="arrow-right" href="/clamping-strategy/managing-features">
-  How to add, remove, or reorder features and operations.
-</Card>
+<CardGroup cols={2}>
+  <Card title="Add, edit, and delete passes" icon="layer-group" href="/clamping-strategy/managing-passes">
+    Add a pass, edit its machining profile, delete a pass, and move features between passes.
+  </Card>
+  <Card title="Manage features in operations" icon="arrows-rotate" href="/clamping-strategy/managing-features">
+    Add or remove features in a pass, and reorder passes.
+  </Card>
+</CardGroup>
